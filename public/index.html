@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vende Como Una Marca Grande — Masterclass Gratuita con Rachel Stewart</title>
+<meta name="description" content="Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio. Masterclass gratuita en vivo. Miércoles 2 de septiembre, 8:00 PM España.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · macrostructure: Split Studio · H2 hero knobs: ratio=7/5, right-side=photo+form, divider=negative-space
+ * theme: custom · vibe: "premium strategic, blue authority, editorial restraint"
+ * paper: oklch(97.5% 0.012 85) · accent: oklch(42% 0.135 258)
+ * display: Cormorant Garamond · headings: Inter 800 · body: Raleway
+ * axes: light / roman-serif / cool · nav: N12+N9 · footer: Ft2
+ * ref: Larissa Alencar zigzag · Jornada watermark · Atenza editorial · Micheline framework
+ * pre-emit critique: P5 H5 E5 S5 R5 V5
+ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --color-paper: #F9F6EB;
+  --color-paper-2: #EFEBE0;
+  --color-paper-3: #E5E0D4;
+  --color-ink: #2C3345;
+  --color-ink-2: #5A6070;
+  --color-accent: #2563B0;
+  --color-accent-hover: #1D5299;
+  --color-accent-dark: #0B2D5E;
+  --color-gold: #D66B3D;
+  --color-hero-bg: #2563B0;
+  --color-hero-bg-2: #1D5299;
+  --color-orange: #D4622B;
+  --color-white: #FAFAFA;
+  --color-rule: #D5D0C5;
+  --color-muted: #8B8E96;
+  --color-focus: #188BF6;
+  --color-success: #2E7D32;
+  --color-red-soft: #C0392B;
+
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Raleway", system-ui, -apple-system, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-display: clamp(2.5rem, 4vw + 1rem, 4rem);
+  --text-display-lg: clamp(3rem, 5vw + 1rem, 5rem);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 50px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-fast: 150ms;
+  --dur-normal: 250ms;
+  --dur-slow: 400ms;
+
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+}
+
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  content-visibility: auto;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+/* ─── 1. EVENT BAR ─── */
+.event-bar {
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 12px var(--space-xl);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  will-change: transform;
+  transform: translateZ(0);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.event-bar__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-2xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.event-bar__logo {
+  height: 48px;
+  width: auto;
+  justify-self: start;
+}
+
+.event-bar__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.event-bar__text {
+  white-space: normal;
+  opacity: 0.9;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  max-width: 380px;
+  text-align: center;
+}
+
+.event-bar__divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+.countdown {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  min-width: 2.8rem;
+}
+
+.countdown__number {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-white);
+}
+
+.countdown__label {
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.countdown__sep {
+  font-size: var(--text-base);
+  font-weight: 600;
+  opacity: 0.4;
+  line-height: 1;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.event-bar__cta {
+  justify-self: end;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-dark);
+  background: var(--color-white);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.event-bar__cta:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  transform: scale(1.03);
+}
+
+/* ─── 2. HERO (ref: Alicia Jiménez — cutout right, form left) ─── */
+.hero {
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  min-height: min(100vh, 1100px);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 30%;
+  opacity: 0.35;
+  transform: translateZ(0);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: end;
+  min-height: min(100vh, 1050px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 0 0 clamp(1rem, 4vw, 2rem);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-3xl) var(--space-xl) var(--space-3xl) 0;
+  align-self: center;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-focus);
+  margin-bottom: var(--space-md);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 4.5vw + 0.5rem, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: var(--space-md);
+  max-width: 50ch;
+}
+
+.hero__meta {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: var(--space-xl);
+  line-height: 1.5;
+}
+
+.hero__photo-col {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: end;
+  overflow: visible;
+}
+
+.hero__photo {
+  width: 100%;
+  height: auto;
+  max-height: min(100vh, 950px);
+  object-fit: contain;
+  object-position: bottom center;
+  z-index: 1;
+}
+
+/* ─── FORM ─── */
+.form-card {
+  background: var(--color-paper);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.form-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: var(--space-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.form-group input::placeholder {
+  color: var(--color-muted);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 32px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+  min-height: 52px;
+}
+
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* ─── 3. BIG PROMISE — Split editorial ─── */
+.promise {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+}
+
+.promise__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.promise__left {
+  padding-right: var(--space-4xl);
+  border-right: 3px solid var(--color-accent);
+}
+
+.promise__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.promise__right {
+  padding-left: var(--space-4xl);
+}
+
+.promise__body {
+  font-size: var(--text-md);
+  line-height: 1.8;
+  color: var(--color-ink-2);
+  margin-bottom: var(--space-md);
+}
+
+.promise__body:last-child { margin-bottom: 0; }
+
+.promise__accent {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ─── 4. TRUST LOGOS ─── */
+.trust {
+  padding: var(--space-3xl) 0;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.trust__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.trust__sublabel {
+  font-size: var(--text-sm);
+  text-align: center;
+  color: var(--color-ink-2);
+  margin-bottom: var(--space-2xl);
+}
+
+.trust__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  flex-wrap: wrap;
+  padding: 0 var(--space-xl);
+}
+
+.trust__logo {
+  height: 40px;
+  width: 120px;
+  object-fit: contain;
+  opacity: 0.65;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  transition: opacity var(--dur-normal) var(--ease-out),
+              filter var(--dur-normal) var(--ease-out);
+}
+
+.trust__logo:last-child {
+  width: 200px;
+  height: 50px;
+}
+
+.trust__logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* ─── PHOTO BREAK (ref: Larissa/Atenza full-bleed dividers) ─── */
+.photo-break {
+  width: 100%;
+  height: clamp(300px, 45vw, 550px);
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: translateZ(0);
+}
+
+/* ─── 5. WHO THIS IS FOR ─── */
+.audience {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+  position: relative;
+  overflow: hidden;
+}
+
+.audience__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.audience__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+.audience__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-lg);
+  line-height: 1.15;
+}
+
+.audience__intro {
+  font-size: var(--text-md);
+  color: var(--color-ink-2);
+  max-width: 55ch;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+.audience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.audience__col {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.audience__col--yes {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.audience__col--no {
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+}
+
+.audience__col-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+
+.audience__col--yes .audience__col-header {
+  border-bottom: 2px solid var(--color-accent);
+}
+.audience__col--no .audience__col-header {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.audience__col-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.audience__col--yes .audience__col-icon {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+.audience__col--no .audience__col-icon {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
+}
+
+.audience__col h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin: 0;
+}
+.audience__col--yes h3 { color: var(--color-hero-bg); }
+.audience__col--no h3 { color: var(--color-white); }
+
+.audience__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audience__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+.audience__col--yes .audience__list li {
+  color: var(--color-ink);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.audience__col--no .audience__list li {
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.audience__list li:last-child { border-bottom: none; }
+
+.audience__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.audience__col--yes .audience__icon {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.audience__col--no .audience__icon {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.5);
+}
+
+.audience__cta-row {
+  text-align: center;
+  margin-top: var(--space-3xl);
+}
+.audience__cta-row p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  margin-bottom: var(--space-lg);
+}
+
+/* ─── 6. RACHEL'S STORY (ref: Larissa/Atenza split editorial) ─── */
+.story {
+  padding: var(--space-5xl) 0;
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.story__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
+}
+
+.story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+.story__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-xl);
+}
+
+.story__text p {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: var(--space-lg);
+}
+
+.story__text p strong {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.story__pullquote {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-white);
+  border-left: 3px solid var(--color-gold);
+  padding-left: var(--space-lg);
+  margin: var(--space-2xl) 0;
+}
+
+.story__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.story__stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.story__stat-label {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+
+.story__photo-wrap {
+  position: relative;
+}
+
+.story__photo {
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+  min-height: 500px;
+  max-height: 750px;
+}
+
+/* ─── 7. SOCIAL PROOF (ref: Atenza accent-bordered cards) ─── */
+.proof {
+  padding: var(--space-5xl) 0;
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+}
+
+.proof__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.proof__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.proof__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.proof__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.proof__card {
+  background: var(--color-white);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  position: relative;
+  transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.proof__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.proof__card::before {
+  content: "\201C";
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--color-accent);
+  opacity: 0.12;
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-xl);
+  line-height: 1;
+}
+
+.proof__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.proof__quote {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-ink);
+  font-style: normal;
+}
+
+.proof__quote p {
+  margin-bottom: var(--space-md);
+}
+
+.proof__quote p:last-child { margin-bottom: 0; }
+
+.proof__result {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ─── 8. WHAT YOU'LL DISCOVER — Framework cards ─── */
+.discover {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+}
+
+.discover__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.discover__label-top {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.discover__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-lg);
+}
+
+.discover__subtitle {
+  font-size: var(--text-md);
+  color: var(--color-ink-2);
+  max-width: 55ch;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.discover__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.discover__card {
+  background: var(--color-white);
+  padding: var(--space-2xl) var(--space-lg);
+  text-align: center;
+  position: relative;
+  border-right: 1px solid var(--color-rule);
+  transition: background var(--dur-normal) var(--ease-out);
+}
+.discover__card:last-child { border-right: none; }
+
+.discover__card:hover {
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+}
+.discover__card:hover .discover__number { color: var(--color-gold); }
+.discover__card:hover .discover__label { color: rgba(255,255,255,0.8); }
+.discover__card:hover .discover__question { color: var(--color-white); }
+.discover__card:hover .discover__desc { color: rgba(255,255,255,0.7); }
+
+.discover__number {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  transition: color var(--dur-normal) var(--ease-out);
+}
+
+.discover__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
+  transition: color var(--dur-normal) var(--ease-out);
+}
+
+.discover__question {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-ink);
+  margin-bottom: var(--space-md);
+  transition: color var(--dur-normal) var(--ease-out);
+}
+
+.discover__desc {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-ink-2);
+  transition: color var(--dur-normal) var(--ease-out);
+}
+
+/* ─── 9. FOUNDER PERFORMANCE — Split (ref: Micheline bio, Atenza editorial) ─── */
+.founder {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow: hidden;
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.founder__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xl);
+}
+
+.founder__body {
+  font-size: var(--text-md);
+  line-height: 1.7;
+  color: var(--color-ink-2);
+  margin-bottom: var(--space-lg);
+}
+
+.founder__pillars {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.founder__pillar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-2);
+}
+
+.founder__pillar::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.founder__photo {
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── 10. THE MAP — Watermark (ref: Jornada background text) ─── */
+.map-reveal {
+  padding: var(--space-5xl) 0;
+  background: var(--color-hero-bg);
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-reveal__watermark {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 14rem);
+  font-weight: 700;
+  color: var(--color-white);
+  opacity: 0.06;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.map-reveal__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.map-reveal__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-gold);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.map-reveal__body {
+  font-size: var(--text-md);
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+  max-width: 55ch;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ─── 11. BRAVIA TRANSITION ─── */
+.bravia {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.bravia__top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-2xl) var(--space-3xl);
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.bravia__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.bravia__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw + 0.5rem, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bravia__body {
+  font-size: var(--text-md);
+  line-height: 1.75;
+  color: var(--color-ink-2);
+  border-left: 3px solid var(--color-gold);
+  padding-left: var(--space-xl);
+}
+
+.bravia__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.bravia__pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 14px var(--space-xl);
+  background: var(--color-white);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.bravia__pill:hover {
+  background: var(--color-hero-bg);
+  border-color: var(--color-hero-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,99,176,0.25);
+}
+
+.bravia__pill:hover .bravia__pill-name { color: var(--color-white); }
+.bravia__pill:hover .bravia__pill-num { color: var(--color-gold); }
+
+.bravia__pill-num {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.bravia__pill-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.bravia__transition {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  text-align: center;
+  color: var(--color-ink-2);
+  max-width: 50ch;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-style: italic;
+  border-top: 2px solid var(--color-rule);
+  padding-top: var(--space-xl);
+}
+
+/* ─── 12. FINAL CTA ─── */
+.final-cta {
+  padding: var(--space-5xl) 0;
+  background: var(--color-accent);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: "MASTERCLASS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 14rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
+  opacity: 0.06;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+}
+
+.final-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.final-cta__left {
+  text-align: left;
+}
+
+.final-cta__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.final-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-lg);
+}
+
+.final-cta__body {
+  font-size: var(--text-md);
+  line-height: 1.7;
+  opacity: 0.85;
+  max-width: 45ch;
+  margin-bottom: var(--space-lg);
+}
+
+.final-cta__meta {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.final-cta__right {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.final-cta__right-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+}
+
+.final-cta .countdown {
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+.final-cta .countdown__unit {
+  background: rgba(255,255,255,0.15);
+  padding: 14px 18px;
+  min-width: 4.5rem;
+}
+
+.final-cta .countdown__number { font-size: var(--text-4xl); }
+.final-cta .countdown__label { font-size: 0.65rem; }
+.final-cta .countdown__sep { font-size: var(--text-2xl); margin-top: 10px; }
+
+.final-cta .btn-primary {
+  background: var(--color-white);
+  color: var(--color-accent);
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: var(--text-base);
+}
+.final-cta .btn-primary:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+/* ─── 13. FAQ ─── */
+.faq {
+  padding: var(--space-5xl) 0;
+  background: var(--color-paper);
+}
+
+.faq__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  text-align: center;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3xl);
+}
+
+.faq__list {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--space-lg) 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-ink);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.faq__question:hover { color: var(--color-accent); }
+
+.faq__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  font-weight: 300;
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+
+.faq__item.is-open .faq__icon {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--dur-slow) var(--ease-out);
+}
+
+.faq__answer-inner {
+  padding-bottom: var(--space-lg);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-ink-2);
+}
+
+/* ─── 14. FOOTER ─── */
+.footer {
+  padding: var(--space-2xl) 0;
+  background: var(--color-hero-bg);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  font-size: var(--text-sm);
+}
+
+.footer a {
+  color: rgba(255,255,255,0.6);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer a:hover { color: var(--color-white); }
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.footer__sep { opacity: 0.3; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 60rem) {
+  .hero { min-height: auto; }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    min-height: auto;
+    padding: var(--space-2xl) clamp(1rem, 4vw, 2rem);
+  }
+  .hero__subtitle { margin-inline: auto; }
+  .hero__photo-col { display: none; }
+  .hero__content { padding: var(--space-2xl) 0; }
+  .form-card { margin: 0 auto; }
+
+  .promise__grid { grid-template-columns: 1fr; }
+  .promise__left {
+    border-right: none;
+    border-bottom: 3px solid var(--color-accent);
+    padding: 0 0 var(--space-2xl) 0;
+    margin-bottom: var(--space-2xl);
+  }
+  .promise__right { padding-left: 0; }
+
+  .audience__grid { grid-template-columns: 1fr; }
+  .audience__col--no { border-left: none; }
+
+  .story__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .story__stats { grid-template-columns: repeat(3, 1fr); }
+  .story__pullquote { text-align: left; }
+  .story__photo-wrap { order: -1; }
+  .story__photo {
+    max-height: 400px;
+    margin: 0 auto;
+  }
+
+  .proof__grid { grid-template-columns: 1fr; }
+
+  .discover__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .founder__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .founder__photo {
+    order: -1;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+  .founder__pillars {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bravia__top { grid-template-columns: 1fr; gap: var(--space-lg); }
+}
+
+@media (max-width: 40rem) {
+  .event-bar { padding: 8px var(--space-sm); }
+  .event-bar__inner { grid-template-columns: 1fr; justify-items: center; gap: 6px; }
+  .event-bar__text { font-size: 0.6rem; white-space: normal; text-align: center; }
+  .event-bar__logo { display: none; }
+  .event-bar__divider { display: none; }
+  .event-bar__cta { display: none; }
+  .countdown__number { font-size: var(--text-base); }
+  .countdown__unit { min-width: 2rem; }
+
+  .hero__title { font-size: clamp(2rem, 6vw, 3rem); }
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: var(--space-lg); }
+  .form-card__title { font-size: var(--text-base); }
+  .btn-primary { font-size: 0.75rem; padding: 14px 20px; letter-spacing: 0.02em; }
+
+  .promise__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+
+  .trust__logos { gap: var(--space-lg); }
+  .trust__logo { height: 28px; width: 80px; }
+
+  .photo-break { height: clamp(150px, 40vw, 250px); }
+
+  .discover__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .discover__card { padding: var(--space-xl) var(--space-lg); border-right: none; border-bottom: 1px solid var(--color-rule); }
+  .discover__card:last-child { border-bottom: none; }
+
+  .founder__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+  .founder__pillars { gap: var(--space-sm); }
+  .founder__pillar { font-size: var(--text-xs); padding: var(--space-xs) var(--space-md); }
+
+  .map-reveal__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+
+  .final-cta__inner { grid-template-columns: 1fr; text-align: center; }
+  .final-cta__left { text-align: center; }
+  .final-cta__body { margin-left: auto; margin-right: auto; }
+  .final-cta__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+
+  .bravia__grid { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- 1. EVENT BAR -->
+<div class="event-bar" role="banner">
+  <div class="event-bar__inner">
+    <img src="assets/images/logos/tmpbozsfavt.webp" alt="Evolvia Studio" class="event-bar__logo">
+    <div class="event-bar__center">
+      <span class="event-bar__text">Masterclass Gratuita en Vivo &middot; Miércoles 2 de Septiembre &middot; 8:00 PM España</span>
+      <span class="event-bar__divider"></span>
+      <div class="countdown" id="countdown-top" aria-label="Cuenta regresiva">
+        <div class="countdown__unit"><span class="countdown__number" data-unit="days">--</span><span class="countdown__label">Días</span></div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit"><span class="countdown__number" data-unit="hours">--</span><span class="countdown__label">Horas</span></div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit"><span class="countdown__number" data-unit="minutes">--</span><span class="countdown__label">Min</span></div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__unit"><span class="countdown__number" data-unit="seconds">--</span><span class="countdown__label">Seg</span></div>
+      </div>
+    </div>
+    <a href="#registro" class="event-bar__cta">Reservar Mi Lugar</a>
+  </div>
+</div>
+
+<!-- 2. HERO + FORM (ref: Alicia Jiménez — cutout right, form left) -->
+<section class="hero" id="registro">
+  <div class="hero__bg"><img src="assets/images/photos/rachel-hero-stage-blue-v3.png" alt="" aria-hidden="true"></div>
+  <div class="hero__grid">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Evento Online de</p>
+      <h1 class="hero__title">Vende Como Una Marca Grande</h1>
+      <p class="hero__subtitle">Aplica la lógica de crecimiento de las grandes marcas a tu negocio.</p>
+      <p class="hero__subtitle">El método de crecimiento de las grandes marcas, adaptado a tu negocio para dejar de vender por rachas y crecer con estrategia.</p>
+      <p class="hero__meta">Miércoles 2 de Septiembre, a las 20:00 Horas (España)<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+      <div class="form-card">
+        <h2 class="form-card__title">Regístrate Gratis Aquí</h2>
+        <form id="registration-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Cómo te gusta que te llamen" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="Tu mejor correo electrónico" required>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Reservar Mi Lugar Gratis</button>
+        </form>
+      </div>
+    </div>
+    <div class="hero__photo-col">
+      <img src="assets/images/photos/rachel-hero-cutout-new.png" alt="Rachel Stewart — Estratega de Marketing y Fundadora de BRAVIA" class="hero__photo" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- 3. BIG PROMISE -->
+<section class="promise">
+  <div class="container">
+    <div class="promise__grid">
+      <div class="promise__left">
+        <h2 class="promise__title">No necesitas el presupuesto de una marca grande. Necesitas <span class="promise__accent">su manera de pensar.</span></h2>
+      </div>
+      <div class="promise__right">
+        <p class="promise__body">Las grandes marcas no crecen simplemente porque tienen más recursos. Crecen porque tienen <span class="promise__accent">una estrategia, una oferta, un posicionamiento, una lógica comercial</span> y una manera de tomar decisiones.</p>
+        <p class="promise__body">En esta masterclass voy a mostrarte cómo aplicar esa forma de pensar a la realidad de tu negocio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TRUST LOGOS -->
+<section class="trust">
+  <div class="container">
+    <p class="trust__label">Estrategia y Marketing Aprendidos Desde Dentro de Grandes Marcas</p>
+    <p class="trust__sublabel">Más de 13 años de experiencia en marketing y estrategia para compañías como:</p>
+    <div class="trust__logos">
+      <img src="assets/images/logos/PepsiCo.svg" alt="PepsiCo" class="trust__logo">
+      <img src="assets/images/logos/KraftHeinz_Logo.png" alt="Kraft Heinz" class="trust__logo">
+      <img src="assets/images/logos/logo_dos_pinos.png" alt="Dos Pinos" class="trust__logo">
+      <img src="assets/images/logos/cannes-lions-logo-transparent.png" alt="Cannes Lions" class="trust__logo">
+      <img src="assets/images/logos/latam.webp" alt="LATAM" class="trust__logo">
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BREAK (ref: Larissa/Atenza full-bleed divider) -->
+<div class="photo-break">
+  <img src="assets/images/photos/Rachel-xmagglennon-79.jpg" alt="" loading="lazy" aria-hidden="true">
+</div>
+
+<!-- 5. WHO THIS IS FOR -->
+<section class="audience">
+  <div class="container">
+    <div class="audience__header">
+      <p class="audience__label">Identif&iacute;cate</p>
+      <h2 class="audience__title">&iquest;Es Esta Masterclass Para Ti?</h2>
+      <p class="audience__intro">Si te identificas con al menos 3 de estos puntos, esta masterclass te va a cambiar la forma de ver tu negocio.</p>
+    </div>
+    <div class="audience__grid">
+      <div class="audience__col audience__col--yes">
+        <div class="audience__col-header">
+          <span class="audience__col-icon" aria-hidden="true">&#10003;</span>
+          <h3>S&iacute;, Es Para Ti Si&hellip;</h3>
+        </div>
+        <ul class="audience__list">
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Ya tienes un negocio funcionando y quieres hacerlo crecer.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tienes ventas, pero son irregulares o impredecibles.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Sientes que demasiado del negocio depende de ti.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Sabes que podr&iacute;as estar facturando m&aacute;s, pero no sabes qu&eacute; est&aacute; frenando el crecimiento.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tienes muchas ideas y te cuesta decidir d&oacute;nde poner el foco.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tu marketing se siente como publicar, probar, lanzar y esperar a ver qu&eacute; pasa.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Quieres dejar de improvisar y empezar a tomar decisiones de crecimiento con estrategia.</span></li>
+        </ul>
+      </div>
+      <div class="audience__col audience__col--no">
+        <div class="audience__col-header">
+          <span class="audience__col-icon" aria-hidden="true">&#10007;</span>
+          <h3>No Es Para Ti Si&hellip;</h3>
+        </div>
+        <ul class="audience__list">
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Todav&iacute;a no tienes un negocio.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Est&aacute;s buscando una idea para emprender desde cero.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Buscas hacks r&aacute;pidos para redes sociales.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="audience__cta-row">
+      <p>&iquest;Te identificas? Reserva tu plaza ahora.</p>
+      <a href="#registro" class="btn-primary">Quiero Mi Plaza Gratuita &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. RACHEL'S STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story__grid">
+      <div class="story__text">
+        <p class="story__label">Sobre Rachel Stewart</p>
+        <h2 class="story__title">Yo Tambi&eacute;n He Recorrido Este Camino.</h2>
+        <p>Durante m&aacute;s de 13 a&ntilde;os trabaj&eacute; en marketing y estrategia para grandes compa&ntilde;&iacute;as, aprendiendo desde dentro c&oacute;mo se construyen marcas, se identifican oportunidades y se toman decisiones de crecimiento.</p>
+        <p>Pero tambi&eacute;n constru&iacute; mis propios negocios.</p>
+        <blockquote class="story__pullquote">El crecimiento no viene de hacer m&aacute;s cosas, sino de entender qu&eacute; decisiones realmente mueven el negocio.</blockquote>
+        <p>Hoy combino esa experiencia corporativa con lo que he aprendido construyendo mis propios negocios para ayudar a otras fundadoras a crecer con estrategia.</p>
+        <div class="story__stats">
+          <div>
+            <div class="story__stat-num">$62K+</div>
+            <div class="story__stat-label">Facturado en su primer negocio</div>
+          </div>
+          <div>
+            <div class="story__stat-num">4.000+</div>
+            <div class="story__stat-label">Unidades vendidas</div>
+          </div>
+          <div>
+            <div class="story__stat-num">50+</div>
+            <div class="story__stat-label">Puntos de venta</div>
+          </div>
+        </div>
+      </div>
+      <div class="story__photo-wrap">
+        <img src="assets/images/photos/Rachel-xmagglennon-3.jpg" alt="Rachel Stewart" class="story__photo" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. SOCIAL PROOF -->
+<section class="proof">
+  <div class="container">
+    <div class="proof__header">
+      <p class="proof__label">Resultados Reales</p>
+      <h2 class="proof__title">Esto No Es Solo Teoría.</h2>
+    </div>
+    <div class="proof__grid">
+      <div class="proof__card">
+        <p class="proof__name">Stephanie</p>
+        <blockquote class="proof__quote">
+          <p>&ldquo;Llevo tratando de emprender un año y no había tenido tanta claridad como después de esas dos horas contigo.&rdquo;</p>
+          <p>&ldquo;En esta semana he podido concretar más cosas que en el último año.&rdquo;</p>
+        </blockquote>
+      </div>
+      <div class="proof__card">
+        <p class="proof__name">Therapp / Ronald</p>
+        <blockquote class="proof__quote">
+          <p>Ya tenían una aplicación, pero necesitaban estrategia. Trabajamos posicionamiento, comercialización, propuesta de valor, rebranding y go-to-market durante aproximadamente dos meses y medio.</p>
+        </blockquote>
+        <p class="proof__result">De cero estrategia de marketing a market-ready en 8 semanas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. WHAT YOU'LL DISCOVER — Framework cards -->
+<section class="discover">
+  <div class="container">
+    <div class="discover__header">
+      <p class="discover__label-top">El Mapa de Crecimiento</p>
+      <h2 class="discover__title">En Esta Masterclass Vas a Descubrir&hellip;</h2>
+      <p class="discover__subtitle">Las cinco preguntas que forman el mapa de crecimiento que las grandes marcas ya usan.</p>
+    </div>
+    <div class="discover__grid">
+      <div class="discover__card">
+        <p class="discover__number">01</p>
+        <p class="discover__label">Claridad</p>
+        <p class="discover__question">&iquest;Qu&eacute; estoy realmente vendiendo?</p>
+        <p class="discover__desc">Define tu oferta con precisi&oacute;n para que el mercado entienda tu valor.</p>
+      </div>
+      <div class="discover__card">
+        <p class="discover__number">02</p>
+        <p class="discover__label">Oportunidad</p>
+        <p class="discover__question">&iquest;D&oacute;nde est&aacute; mi oportunidad de crecimiento?</p>
+        <p class="discover__desc">Identifica el punto exacto donde tu negocio puede escalar.</p>
+      </div>
+      <div class="discover__card">
+        <p class="discover__number">03</p>
+        <p class="discover__label">Motor Comercial</p>
+        <p class="discover__question">&iquest;C&oacute;mo convierto estrategia en ventas?</p>
+        <p class="discover__desc">Construye un sistema que genera ingresos de forma predecible.</p>
+      </div>
+      <div class="discover__card">
+        <p class="discover__number">04</p>
+        <p class="discover__label">Marca + Mercado</p>
+        <p class="discover__question">&iquest;Por qu&eacute; deber&iacute;an elegirme?</p>
+        <p class="discover__desc">Posiciona tu marca para que compita con las grandes.</p>
+      </div>
+      <div class="discover__card">
+        <p class="discover__number">05</p>
+        <p class="discover__label">Fundadora</p>
+        <p class="discover__question">&iquest;Puedo sostener el siguiente nivel?</p>
+        <p class="discover__desc">Prepara tu mentalidad y estructura para el crecimiento real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FOUNDER PERFORMANCE — Split layout (ref: Micheline bio) -->
+<section class="founder">
+  <div class="container">
+    <div class="founder__grid">
+      <img src="assets/images/photos/Rachel-xmagglennon-29.jpg" alt="Rachel Stewart" class="founder__photo" loading="lazy">
+      <div class="founder__text">
+        <h2 class="founder__title">Tu negocio no puede crecer mucho más allá de lo que tú estás preparada para sostener.</h2>
+        <p class="founder__body">Puedes tener una estrategia increíble y aun así ser tú misma el cuello de botella. ¿Tú decides todo? ¿Tú vendes? ¿Tú haces marketing? ¿Tú atiendes? ¿Tú creas? ¿Tú resuelves?</p>
+        <p class="founder__body">Por eso BRAVIA no termina en estrategia. También trabaja la fundadora que tiene que sostener esa estrategia: pensamientos, creencias, miedo, capacidad de decidir, actuar y sostener.</p>
+        <div class="founder__pillars">
+          <span class="founder__pillar">Business Growth</span>
+          <span class="founder__pillar">Founder Performance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. THE MAP — with watermark (ref: Jornada background text) -->
+<section class="map-reveal">
+  <div class="map-reveal__watermark" aria-hidden="true">BRAVIA</div>
+  <div class="container container--narrow">
+    <h2 class="map-reveal__title">Vende Como Una Marca Grande</h2>
+    <p class="map-reveal__subtitle">Este es el mapa.</p>
+    <p class="map-reveal__body">No te dije que publiques más. No te dije que tengas más seguidores. No te dije que hagas más lanzamientos. No te dije que trabajes 12 horas.</p>
+    <p class="map-reveal__body">Te dije que tomes mejores decisiones.</p>
+  </div>
+</section>
+
+<!-- 11. BRAVIA TRANSITION -->
+<section class="bravia">
+  <div class="container">
+    <div class="bravia__top">
+      <div>
+        <p class="bravia__label">El Método BRAVIA</p>
+        <h2 class="bravia__title">El método te lo acabo de mostrar. Ahora puedes instalarlo en tu negocio.</h2>
+      </div>
+      <p class="bravia__body">BRAVIA es el método de crecimiento de las grandes marcas, adaptado a la realidad de una fundadora. Para dejar de tomar decisiones aisladas, dejar de vender por rachas y empezar a construir un negocio con una estrategia que conecte todas las piezas.</p>
+    </div>
+    <div class="bravia__grid">
+      <div class="bravia__pill"><span class="bravia__pill-num">01</span><span class="bravia__pill-name">Mente</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">02</span><span class="bravia__pill-name">Oportunidad</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">03</span><span class="bravia__pill-name">Estrategia</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">04</span><span class="bravia__pill-name">Oferta + Monetización</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">05</span><span class="bravia__pill-name">Marca</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">06</span><span class="bravia__pill-name">Comunicación + Contenido</span></div>
+      <div class="bravia__pill"><span class="bravia__pill-num">07</span><span class="bravia__pill-name">Sostenibilidad</span></div>
+    </div>
+    <p class="bravia__transition">Hoy te mostré cómo piensa una marca grande cuando quiere crecer. BRAVIA existe para llevar esa forma de pensar a tu negocio.</p>
+  </div>
+</section>
+
+<!-- 12. FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta__inner">
+      <div class="final-cta__left">
+        <p class="final-cta__label">Masterclass Gratuita</p>
+        <h2 class="final-cta__title">Vende Como Una Marca Grande</h2>
+        <p class="final-cta__body">Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio para dejar de vender por rachas y empezar a crecer con estrategia.</p>
+        <p class="final-cta__meta">Miércoles 2 de Septiembre &middot; 8:00 PM España<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+      </div>
+      <div class="final-cta__right">
+        <p class="final-cta__right-title">La masterclass empieza en:</p>
+        <div class="countdown" id="countdown-bottom" aria-label="Cuenta regresiva">
+          <div class="countdown__unit"><span class="countdown__number" data-unit="days">--</span><span class="countdown__label">Días</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__number" data-unit="hours">--</span><span class="countdown__label">Horas</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__number" data-unit="minutes">--</span><span class="countdown__label">Min</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__number" data-unit="seconds">--</span><span class="countdown__label">Seg</span></div>
+        </div>
+        <a href="#registro" class="btn-primary">Quiero Reservar Mi Lugar Gratis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. FAQ -->
+<section class="faq">
+  <div class="container">
+    <h2 class="faq__title">Preguntas Frecuentes</h2>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿La masterclass es gratuita?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Sí. Es completamente gratuita.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Cuándo es?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Miércoles 2 de septiembre a las 8:00 PM, hora España.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Cuánto dura?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">90 minutos.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Será en vivo?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Sí. Será completamente en vivo.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Habrá grabación?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">No. La masterclass será en vivo y no habrá grabación.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Necesito tener un negocio?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Sí. Esta masterclass está diseñada para fundadoras que ya tienen un negocio y quieren hacerlo crecer con más estrategia y método.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Necesito tener una gran audiencia?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">No. El foco está en tomar mejores decisiones de crecimiento, no en tener más seguidores.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">¿Qué voy a aprender?<span class="faq__icon">+</span></button>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Vas a descubrir las cinco preguntas que forman el mapa de crecimiento que voy a enseñarte: claridad, oportunidad, motor comercial, marca + mercado y fundadora.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <span>&copy; Rachel Stewart / BRAVIA</span>
+      <span class="footer__sep">&middot;</span>
+      <a href="#">Política de Privacidad</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="#">Términos y Condiciones</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var el = document.querySelector(this.getAttribute('href'));
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  var target = new Date('2026-09-02T20:00:00+02:00').getTime();
+
+  function updateCountdowns() {
+    var now = Date.now();
+    var diff = target - now;
+    if (diff < 0) diff = 0;
+
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+
+    var units = document.querySelectorAll('[data-unit]');
+    for (var i = 0; i < units.length; i++) {
+      var el = units[i];
+      var u = el.getAttribute('data-unit');
+      var val = u === 'days' ? d : u === 'hours' ? h : u === 'minutes' ? m : s;
+      el.textContent = val < 10 ? '0' + val : val;
+    }
+  }
+
+  updateCountdowns();
+  setInterval(updateCountdowns, 1000);
+
+  // FAQ Accordion
+  var faqButtons = document.querySelectorAll('.faq__question');
+  for (var i = 0; i < faqButtons.length; i++) {
+    faqButtons[i].addEventListener('click', function() {
+      var item = this.parentElement;
+      var answer = item.querySelector('.faq__answer');
+      var isOpen = item.classList.contains('is-open');
+
+      var allItems = document.querySelectorAll('.faq__item');
+      for (var j = 0; j < allItems.length; j++) {
+        allItems[j].classList.remove('is-open');
+        allItems[j].querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        allItems[j].querySelector('.faq__answer').style.maxHeight = null;
+      }
+
+      if (!isOpen) {
+        item.classList.add('is-open');
+        this.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  }
+
+  // Form submission placeholder
+  var form = document.getElementById('registration-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = 'thank-you.html';
+    });
+  }
+})();
+</script>
+</body>
+</html>

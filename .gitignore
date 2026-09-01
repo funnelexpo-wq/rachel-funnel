@@ -1,0 +1,21 @@
+# Secrets
+.env
+credentials.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# Claude Code
+.claude/
+
+# Zihad template
+Zihad/
+__MACOSX/
+
+# Node (just in case)
+node_modules/
+dist/
