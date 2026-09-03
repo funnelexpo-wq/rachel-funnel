@@ -161,7 +161,7 @@ ul, ol { list-style: none; }
   height: 48px;
   width: auto;
   justify-self: start;
-  filter: brightness(0);
+  filter: brightness(0) saturate(100%) invert(27%) sepia(85%) saturate(1200%) hue-rotate(199deg) brightness(95%) contrast(90%);
 }
 
 .event-bar__center {
@@ -309,7 +309,7 @@ ul, ol { list-style: none; }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 3.5vw + 0.5rem, 4.2rem);
+  font-size: clamp(2.2rem, 2.8vw + 0.5rem, 3.5rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
