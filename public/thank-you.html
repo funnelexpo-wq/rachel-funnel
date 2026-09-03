@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¡Estás Dentro! — Vende Como Una Marca Grande en 90 Días en 90 Días</title>
-<meta name="description" content="Tu lugar está reservado. Miércoles 2 de septiembre, 8:00 PM Hora España / Madrid.">
+<title>Tu Registro No Está Completo — Vende Como Una Marca Grande en 90 Días</title>
+<meta name="description" content="Completa tu registro uniéndote al grupo exclusivo de WhatsApp para recibir el enlace de acceso al evento.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
 :root {
   --color-paper: #F9F6EB;
   --color-paper-2: #EFEBE0;
-  --color-paper-3: #E5E0D4;
   --color-ink: #2C3345;
   --color-ink-2: #5A6070;
   --color-accent: #2563B0;
@@ -22,14 +21,13 @@
   --color-accent-dark: #0B2D5E;
   --color-gold: #D66B3D;
   --color-hero-bg: #2563B0;
-  --color-hero-bg-2: #1D5299;
   --color-white: #FAFAFA;
   --color-rule: #D5D0C5;
   --color-muted: #8B8E96;
   --color-focus: #188BF6;
-  --color-success: #2E7D32;
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #20B858;
+  --color-warning: #E53E3E;
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-heading: "Inter", system-ui, -apple-system, sans-serif;
@@ -45,7 +43,6 @@
   --text-3xl: 2.25rem;
   --text-4xl: 3rem;
   --text-display: clamp(2.5rem, 4vw + 1rem, 4rem);
-  --text-display-lg: clamp(3rem, 5vw + 1rem, 5rem);
 
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -53,9 +50,7 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 4rem;
-  --space-4xl: 6rem;
-  --space-5xl: 8rem;
+  --space-3xl: 3rem;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -65,8 +60,7 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 150ms;
   --dur-normal: 250ms;
-
-  --max-width: 1140px;
+  --max-width: 900px;
 }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
@@ -86,7 +80,6 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
-
 :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -100,354 +93,117 @@ a { color: inherit; text-decoration: none; }
   padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
-/* ─── HERO HEADER ─── */
+/* ─── HERO: INCOMPLETE REGISTRATION ─── */
 .ty-hero {
   background: var(--color-hero-bg);
   color: var(--color-white);
-  padding: var(--space-5xl) 0 var(--space-4xl);
+  padding: var(--space-3xl) 0;
   position: relative;
   overflow: hidden;
-  flex-shrink: 0;
-}
-
-.ty-hero::before {
-  content: "CONFIRMADO";
-  font-family: var(--font-display);
-  font-size: clamp(5rem, 12vw, 12rem);
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  opacity: 0.06;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.ty-hero__inner {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3xl);
-  align-items: center;
-}
-
-.ty-hero__left {
-  text-align: left;
-}
-
-.ty-hero__check {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--color-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-xl);
-  animation: scaleIn 0.5s var(--ease-out) forwards;
-}
-
-@keyframes scaleIn {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.ty-hero__check svg {
-  width: 32px;
-  height: 32px;
-  stroke: var(--color-white);
-  stroke-width: 3;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.ty-hero__eyebrow {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: var(--space-md);
-}
-
-.ty-hero__title {
-  font-family: var(--font-display);
-  font-size: var(--text-display);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-lg);
-}
-
-.ty-hero__subtitle {
-  font-size: var(--text-md);
-  opacity: 0.85;
-  max-width: 50ch;
-  line-height: 1.7;
-}
-
-/* Hero right — countdown card */
-.ty-hero__right {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(8px);
-  padding: var(--space-2xl);
   text-align: center;
 }
 
-.ty-hero__countdown-label {
+.ty-hero__title {
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  opacity: 0.7;
+  line-height: 1.2;
   margin-bottom: var(--space-lg);
 }
 
-.ty-hero .countdown {
-  display: flex;
-  gap: var(--space-md);
-  align-items: center;
-  justify-content: center;
-  font-variant-numeric: tabular-nums;
-  margin-bottom: var(--space-xl);
-}
-
-.ty-hero .countdown__unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255,255,255,0.12);
-  border-radius: var(--radius-md);
-  padding: 14px 18px;
-  min-width: 4.5rem;
-}
-
-.ty-hero .countdown__number {
+.ty-hero__important {
   font-family: var(--font-heading);
-  font-size: var(--text-4xl);
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.2rem);
   font-weight: 800;
-  line-height: 1;
-  color: var(--color-white);
+  color: var(--color-gold);
+  margin-bottom: var(--space-lg);
 }
 
-.ty-hero .countdown__label {
+.ty-hero__body {
   font-family: var(--font-heading);
-  font-size: var(--text-xs);
+  font-size: var(--text-lg);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.6;
-  margin-top: 6px;
-}
-
-.ty-hero .countdown__sep {
-  font-size: var(--text-3xl);
-  font-weight: 300;
-  opacity: 0.4;
-  line-height: 1;
-  align-self: flex-start;
-  margin-top: 14px;
-}
-
-.ty-hero__event-meta {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  opacity: 0.7;
   line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+  opacity: 0.95;
 }
 
-/* ─── DETAILS SECTION ─── */
-.ty-details {
-  padding: var(--space-5xl) 0;
+/* ─── WHATSAPP CTA SECTION ─── */
+.wa-cta {
+  padding: var(--space-3xl) 0;
+  text-align: center;
   flex: 1;
 }
 
-.ty-details__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3xl);
-}
-
-/* Event details card */
-.ty-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-rule);
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
-}
-
-.ty-card__eyebrow {
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: var(--space-sm);
-}
-
-.ty-card__title {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-ink);
-  margin-bottom: var(--space-xl);
-  line-height: 1.2;
-}
-
-.ty-card__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--color-rule);
-  gap: var(--space-md);
-}
-
-.ty-card__row:last-child { border-bottom: none; }
-
-.ty-card__label {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--color-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  flex-shrink: 0;
-}
-
-.ty-card__value {
-  font-weight: 500;
-  color: var(--color-ink);
-  text-align: right;
-}
-
-/* ─── STEPS CARD ─── */
-.ty-steps-card {
-  background: var(--color-white);
-  border: 1px solid var(--color-rule);
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
-}
-
-.ty-steps { counter-reset: step; }
-
-.ty-step {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  align-items: start;
-}
-
-.ty-step:last-child { margin-bottom: 0; }
-
-.ty-step__number {
-  counter-increment: step;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  color: var(--color-white);
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ty-step__number::before { content: counter(step); }
-
-.ty-step__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-md);
-  font-weight: 700;
-  color: var(--color-ink);
-  margin-bottom: var(--space-xs);
-}
-
-.ty-step__body {
-  font-size: var(--text-sm);
-  color: var(--color-ink-2);
-  line-height: 1.6;
-}
-
-/* ─── ACTION BUTTONS ─── */
-.ty-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg);
-  margin-top: var(--space-3xl);
-}
-
-.btn {
+.wa-cta__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  width: 100%;
-  padding: 18px 32px;
+  gap: var(--space-md);
+  padding: 22px 48px;
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: var(--text-lg);
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   border: none;
   border-radius: var(--radius-pill);
   cursor: pointer;
   text-decoration: none;
+  background: var(--color-whatsapp);
+  color: var(--color-white);
   transition: background var(--dur-fast) var(--ease-out),
               transform var(--dur-fast) var(--ease-out),
               box-shadow var(--dur-fast) var(--ease-out);
-  min-height: 56px;
+  min-height: 64px;
+  animation: pulse 2s infinite;
 }
 
-.btn:active { transform: translateY(1px); }
-
-.btn--calendar {
-  background: var(--color-accent);
-  color: var(--color-white);
-}
-.btn--calendar:hover {
-  background: var(--color-accent-hover);
-  box-shadow: 0 6px 20px rgba(37,99,176,0.3);
-}
-
-.btn--calendar svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.btn--whatsapp {
-  background: var(--color-whatsapp);
-  color: var(--color-white);
-}
-.btn--whatsapp:hover {
+.wa-cta__btn:hover {
   background: var(--color-whatsapp-hover);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.3);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+  transform: translateY(-2px);
 }
 
-.btn--whatsapp svg {
-  width: 20px;
-  height: 20px;
+.wa-cta__btn:active { transform: translateY(1px); }
+
+.wa-cta__btn svg {
+  width: 28px;
+  height: 28px;
   fill: currentColor;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+}
+
+.wa-cta__fallback {
+  margin-top: var(--space-2xl);
+  font-size: var(--text-md);
+  color: var(--color-ink-2);
+  line-height: 1.6;
+}
+
+.wa-cta__fallback-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wa-cta__fallback-link:hover {
+  color: var(--color-accent-hover);
 }
 
 /* ─── REMINDER BANNER ─── */
@@ -501,13 +257,16 @@ a { color: inherit; text-decoration: none; }
   font-size: var(--text-md);
   opacity: 0.8;
   max-width: 50ch;
-  margin: 0 auto var(--space-xl);
+  margin: 0 auto;
   line-height: 1.6;
 }
 
-.ty-reminder .btn--whatsapp {
-  max-width: 420px;
-  margin: 0 auto;
+.ty-reminder__time {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-top: var(--space-lg);
+  opacity: 0.95;
 }
 
 /* ─── FOOTER ─── */
@@ -520,159 +279,43 @@ a { color: inherit; text-decoration: none; }
   flex-shrink: 0;
 }
 
-.ty-footer a {
-  transition: color var(--dur-fast) var(--ease-out);
-}
-
-.ty-footer a:hover { color: rgba(255,255,255,0.8); }
-
-.ty-footer__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-}
-
-.ty-footer__sep { opacity: 0.3; }
-
 /* ─── RESPONSIVE ─── */
 @media (max-width: 48rem) {
-  .ty-hero__inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .ty-hero__left { text-align: center; }
-  .ty-hero__check { margin: 0 auto var(--space-xl); }
-  .ty-hero__title { font-size: clamp(2rem, 6vw, 3rem); }
-  .ty-details__grid { grid-template-columns: 1fr; }
-  .ty-actions { grid-template-columns: 1fr; }
-  .ty-card { padding: var(--space-lg); }
-  .ty-card__row { flex-direction: column; gap: var(--space-xs); }
-  .ty-card__value { text-align: left; }
-  .ty-step { grid-template-columns: 40px 1fr; gap: var(--space-md); }
-  .ty-step__number { width: 40px; height: 40px; font-size: var(--text-sm); }
-  .ty-hero .countdown__number { font-size: var(--text-2xl); }
-  .ty-hero .countdown__unit { padding: 10px 14px; min-width: 3.5rem; }
-  .ty-hero__right { padding: var(--space-lg); }
-  .ty-hero__subtitle { font-size: var(--text-sm); max-width: 100%; }
-  .ty-hero__event-meta { font-size: var(--text-xs); }
+  .ty-hero__title { font-size: clamp(1.5rem, 5vw, 2.2rem); }
+  .ty-hero__important { font-size: clamp(1.3rem, 4vw, 1.8rem); }
+  .ty-hero__body { font-size: var(--text-md); }
+  .wa-cta__btn { padding: 18px 32px; font-size: var(--text-md); }
 }
 
 @media (max-width: 26rem) {
-  .ty-hero .countdown__number { font-size: var(--text-lg); }
-  .ty-hero .countdown__unit { padding: 8px 10px; min-width: 2.5rem; }
-  .ty-hero__title { font-size: clamp(1.75rem, 6vw, 2.5rem); overflow-wrap: anywhere; }
-  .ty-hero__right { padding: var(--space-md); }
-  .ty-btn { font-size: var(--text-sm); padding: 14px 20px; }
+  .ty-hero__title { font-size: 1.4rem; }
+  .wa-cta__btn { padding: 16px 24px; font-size: var(--text-base); }
 }
 </style>
 </head>
 <body>
 
-<!-- HERO HEADER -->
+<!-- HERO: INCOMPLETE REGISTRATION -->
 <header class="ty-hero">
   <div class="container">
-    <div class="ty-hero__inner">
-      <div class="ty-hero__left">
-        <div class="ty-hero__check" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <p class="ty-hero__eyebrow">Registro Confirmado</p>
-        <h1 class="ty-hero__title">¡Estás Dentro!</h1>
-        <p class="ty-hero__subtitle">Tu lugar en la masterclass <strong>Vende Como Una Marca Grande en 90 Días</strong> está confirmado. Revisa tu email para recibir los detalles de acceso.</p>
-      </div>
-      <div class="ty-hero__right">
-        <p class="ty-hero__countdown-label">La masterclass empieza en</p>
-        <div class="countdown" id="countdown" aria-label="Cuenta regresiva">
-          <div class="countdown__unit"><span class="countdown__number" data-unit="days">--</span><span class="countdown__label">Días</span></div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__unit"><span class="countdown__number" data-unit="hours">--</span><span class="countdown__label">Horas</span></div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__unit"><span class="countdown__number" data-unit="minutes">--</span><span class="countdown__label">Min</span></div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__unit"><span class="countdown__number" data-unit="seconds">--</span><span class="countdown__label">Seg</span></div>
-        </div>
-        <p class="ty-hero__event-meta">Miércoles 2 de Septiembre<br>8:00 PM Hora España / Madrid &middot; 90 Min &middot; En Vivo</p>
-      </div>
-    </div>
+    <h1 class="ty-hero__title">Tu Registro No Está Completo Aún</h1>
+    <p class="ty-hero__important">¡¡IMPORTANTE!!</p>
+    <p class="ty-hero__body">Para completar el registro, sé parte del grupo exclusivo de WhatsApp para obtener el enlace de acceso al evento.</p>
   </div>
 </header>
 
-<!-- DETAILS + STEPS -->
-<main class="ty-details">
+<!-- WHATSAPP CTA -->
+<main class="wa-cta">
   <div class="container">
-    <div class="ty-details__grid">
+    <a href="https://chat.whatsapp.com/Gg8M5hT6GeH0GAGOz7q0QD?s=sh&p=i&mlu=4&ilr=4" class="wa-cta__btn" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Sí Quiero Entrar al Grupo
+    </a>
 
-      <!-- Event Details Card -->
-      <div class="ty-card">
-        <p class="ty-card__eyebrow">Tu Evento</p>
-        <h2 class="ty-card__title">Detalles de la Masterclass</h2>
-        <div class="ty-card__row">
-          <span class="ty-card__label">Evento</span>
-          <span class="ty-card__value">Vende Como Una Marca Grande en 90 Días</span>
-        </div>
-        <div class="ty-card__row">
-          <span class="ty-card__label">Fecha</span>
-          <span class="ty-card__value">Miércoles 2 de Septiembre, 2026</span>
-        </div>
-        <div class="ty-card__row">
-          <span class="ty-card__label">Hora</span>
-          <span class="ty-card__value">8:00 PM Hora España / Madrid</span>
-        </div>
-        <div class="ty-card__row">
-          <span class="ty-card__label">Duración</span>
-          <span class="ty-card__value">90 minutos</span>
-        </div>
-        <div class="ty-card__row">
-          <span class="ty-card__label">Formato</span>
-          <span class="ty-card__value">En Vivo &middot; Sin Grabación</span>
-        </div>
-      </div>
-
-      <!-- Next Steps Card -->
-      <div class="ty-steps-card">
-        <p class="ty-card__eyebrow">Prepárate</p>
-        <h2 class="ty-card__title">Próximos Pasos</h2>
-        <div class="ty-steps">
-          <div class="ty-step">
-            <div class="ty-step__number" aria-hidden="true"></div>
-            <div>
-              <p class="ty-step__title">Revisa tu email</p>
-              <p class="ty-step__body">Te hemos enviado un correo con todos los detalles y el enlace de acceso. Revisa también tu carpeta de spam o promociones.</p>
-            </div>
-          </div>
-          <div class="ty-step">
-            <div class="ty-step__number" aria-hidden="true"></div>
-            <div>
-              <p class="ty-step__title">Añade la fecha a tu calendario</p>
-              <p class="ty-step__body">No te pierdas la masterclass. Recuerda: es en vivo y sin grabación.</p>
-            </div>
-          </div>
-          <div class="ty-step">
-            <div class="ty-step__number" aria-hidden="true"></div>
-            <div>
-              <p class="ty-step__title">Únete al grupo de WhatsApp</p>
-              <p class="ty-step__body">Conéctate con otras fundadoras y recibe recordatorios antes del evento.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="wa-cta__fallback">
+      <p>Si tienes inconvenientes para unirte al grupo, haz clic en el siguiente botón y te incluimos.</p>
+      <a href="https://chat.whatsapp.com/Gg8M5hT6GeH0GAGOz7q0QD?s=sh&p=i&mlu=4&ilr=4" class="wa-cta__fallback-link" target="_blank" rel="noopener noreferrer">Clickea Aquí &uarr;</a>
     </div>
-
-    <!-- Action Buttons -->
-    <div class="ty-actions">
-      <a href="#" class="btn btn--calendar" id="calendar-btn">
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Añadir a Mi Calendario
-      </a>
-      <a href="#" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Unirme al Grupo de WhatsApp
-      </a>
-    </div>
-
   </div>
 </main>
 
@@ -682,7 +325,8 @@ a { color: inherit; text-decoration: none; }
     <div class="ty-reminder__inner">
       <p class="ty-reminder__eyebrow">No Te Lo Pierdas</p>
       <h2 class="ty-reminder__title">Recuerda: Sin Grabación</h2>
-      <p class="ty-reminder__body">Esta masterclass será completamente en vivo y no habrá grabación disponible. Asegúrate de estar presente el miércoles 2 de septiembre a las 8:00 PM hora España / Madrid.</p>
+      <p class="ty-reminder__body">Esta masterclass será completamente en vivo y no habrá grabación disponible. Asegúrate de estar presente el miércoles 2 de septiembre a las 8:00 PM.</p>
+      <p class="ty-reminder__time">8:00 PM Hora España / Madrid</p>
     </div>
   </div>
 </section>
@@ -690,48 +334,9 @@ a { color: inherit; text-decoration: none; }
 <!-- FOOTER -->
 <footer class="ty-footer">
   <div class="container">
-    <div class="ty-footer__inner">
-      <span>&copy; Rachel Stewart / BRAVIA</span>
-      <span class="ty-footer__sep">&middot;</span>
-      <a href="#">Política de Privacidad</a>
-      <span class="ty-footer__sep">&middot;</span>
-      <a href="#">Términos y Condiciones</a>
-    </div>
+    <span>Copyright &copy; 2026. Todos los derechos reservados.</span>
   </div>
 </footer>
 
-<script>
-(function(){
-  var target = new Date('2026-09-02T20:00:00+02:00').getTime();
-  function updateCountdown() {
-    var now = Date.now();
-    var diff = Math.max(0, target - now);
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    var units = document.querySelectorAll('[data-unit]');
-    for (var i = 0; i < units.length; i++) {
-      var el = units[i];
-      var u = el.getAttribute('data-unit');
-      var val = u === 'days' ? d : u === 'hours' ? h : u === 'minutes' ? m : s;
-      el.textContent = val < 10 ? '0' + val : val;
-    }
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  var calBtn = document.getElementById('calendar-btn');
-  if (calBtn) {
-    var start = '20260902T180000Z';
-    var end = '20260902T193000Z';
-    var title = encodeURIComponent('Masterclass: Vende Como Una Marca Grande en 90 Días');
-    var details = encodeURIComponent('Masterclass en vivo con Rachel Stewart.\n\nEnlace de acceso: se enviará por email.');
-    calBtn.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + title + '&dates=' + start + '/' + end + '&details=' + details;
-    calBtn.target = '_blank';
-    calBtn.rel = 'noopener noreferrer';
-  }
-})();
-</script>
 </body>
 </html>
