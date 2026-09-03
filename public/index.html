@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vende Como Una Marca Grande — Masterclass Gratuita con Rachel Stewart</title>
+<title>Vende Como Una Marca Grande en 90 Días — Masterclass Gratuita con Rachel Stewart</title>
 <meta name="description" content="Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio. Masterclass gratuita en vivo. Miércoles 2 de septiembre, 8:00 PM España.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -131,8 +131,8 @@ ul, ol { list-style: none; }
 
 /* ─── 1. EVENT BAR ─── */
 .event-bar {
-  background: var(--color-accent);
-  color: var(--color-white);
+  background: var(--color-paper);
+  color: var(--color-ink);
   padding: 12px var(--space-xl);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -144,7 +144,7 @@ ul, ol { list-style: none; }
   z-index: 100;
   will-change: transform;
   transform: translateZ(0);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .event-bar__inner {
@@ -183,7 +183,7 @@ ul, ol { list-style: none; }
 .event-bar__divider {
   width: 1px;
   height: 24px;
-  background: rgba(255,255,255,0.2);
+  background: var(--color-rule);
   flex-shrink: 0;
 }
 
@@ -198,7 +198,7 @@ ul, ol { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255,255,255,0.1);
+  background: var(--color-accent);
   border-radius: var(--radius-sm);
   padding: 4px 8px;
   min-width: 2.8rem;
@@ -236,8 +236,8 @@ ul, ol { list-style: none; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-accent-dark);
-  background: var(--color-white);
+  color: var(--color-white);
+  background: var(--color-accent);
   padding: 6px 16px;
   border-radius: var(--radius-pill);
   text-decoration: none;
@@ -323,6 +323,12 @@ ul, ol { list-style: none; }
   opacity: 0.85;
   margin-bottom: var(--space-md);
   max-width: 50ch;
+}
+
+.hero__subtitle--lead {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  opacity: 1;
 }
 
 .hero__meta {
@@ -1579,7 +1585,7 @@ ul, ol { list-style: none; }
   <div class="event-bar__inner">
     <img src="assets/images/logos/tmpbozsfavt.webp" alt="Evolvia Studio" class="event-bar__logo">
     <div class="event-bar__center">
-      <span class="event-bar__text">Masterclass Gratuita en Vivo &middot; Miércoles 2 de Septiembre &middot; 8:00 PM España</span>
+      <span class="event-bar__text">Masterclass Gratuita en Vivo &middot; Miércoles 2 de Septiembre &middot; 8:00 PM Hora España / Madrid</span>
       <span class="event-bar__divider"></span>
       <div class="countdown" id="countdown-top" aria-label="Cuenta regresiva">
         <div class="countdown__unit"><span class="countdown__number" data-unit="days">--</span><span class="countdown__label">Días</span></div>
@@ -1601,10 +1607,10 @@ ul, ol { list-style: none; }
   <div class="hero__grid">
     <div class="hero__content">
       <p class="hero__eyebrow">Evento Online de</p>
-      <h1 class="hero__title">Vende Como Una Marca Grande</h1>
-      <p class="hero__subtitle">Aplica la lógica de crecimiento de las grandes marcas a tu negocio.</p>
-      <p class="hero__subtitle">El método de crecimiento de las grandes marcas, adaptado a tu negocio para dejar de vender por rachas y crecer con estrategia.</p>
-      <p class="hero__meta">Miércoles 2 de Septiembre, a las 20:00 Horas (España)<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+      <h1 class="hero__title">Vende Como Una Marca Grande en 90 Días</h1>
+      <p class="hero__subtitle hero__subtitle--lead">El método de crecimiento de las grandes marcas, adaptado a tu negocio para dejar de vender por rachas y crecer con estrategia</p>
+      <p class="hero__subtitle">Para fundadoras y consultoras que ya tienen un negocio y están listas para dejar de improvisar, crecer con método y convertirse en la persona capaz de sostener el siguiente nivel de crecimiento de su negocio</p>
+      <p class="hero__meta">Miércoles 2 de Septiembre, a las 8:00 PM Hora España / Madrid<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
       <div class="form-card">
         <h2 class="form-card__title">Regístrate Gratis Aquí</h2>
         <form id="registration-form" action="#" method="POST">
@@ -1866,9 +1872,9 @@ ul, ol { list-style: none; }
     <div class="final-cta__inner">
       <div class="final-cta__left">
         <p class="final-cta__label">Masterclass Gratuita</p>
-        <h2 class="final-cta__title">Vende Como Una Marca Grande</h2>
+        <h2 class="final-cta__title">Vende Como Una Marca Grande en 90 Días</h2>
         <p class="final-cta__body">Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio para dejar de vender por rachas y empezar a crecer con estrategia.</p>
-        <p class="final-cta__meta">Miércoles 2 de Septiembre &middot; 8:00 PM España<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+        <p class="final-cta__meta">Miércoles 2 de Septiembre &middot; 8:00 PM Hora España / Madrid<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
       </div>
       <div class="final-cta__right">
         <p class="final-cta__right-title">La masterclass empieza en:</p>
@@ -1898,7 +1904,7 @@ ul, ol { list-style: none; }
       </div>
       <div class="faq__item">
         <button class="faq__question" aria-expanded="false">¿Cuándo es?<span class="faq__icon">+</span></button>
-        <div class="faq__answer" role="region"><div class="faq__answer-inner">Miércoles 2 de septiembre a las 8:00 PM, hora España.</div></div>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Miércoles 2 de septiembre a las 8:00 PM, hora España / Madrid.</div></div>
       </div>
       <div class="faq__item">
         <button class="faq__question" aria-expanded="false">¿Cuánto dura?<span class="faq__icon">+</span></button>
