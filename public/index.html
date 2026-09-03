@@ -876,7 +876,7 @@ ul, ol { list-style: none; }
 .proof__track {
   display: flex;
   gap: var(--space-xl);
-  animation: proof-scroll 30s linear infinite;
+  animation: proof-scroll 60s linear infinite;
   width: max-content;
 }
 
@@ -884,65 +884,30 @@ ul, ol { list-style: none; }
   animation-play-state: paused;
 }
 
-.proof__card {
+.proof__slide {
   flex-shrink: 0;
-  width: 380px;
-  background: var(--color-white);
+  width: 340px;
   border-radius: var(--radius-lg);
-  padding: var(--space-2xl);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: var(--color-white);
 }
 
-.proof__stars {
-  color: var(--color-gold);
+.proof__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.proof__cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+.proof__cta .btn-primary--orange {
+  width: auto;
   font-size: var(--text-lg);
-  margin-bottom: var(--space-md);
-  letter-spacing: 2px;
-}
-
-.proof__quote {
-  font-size: var(--text-base);
-  line-height: 1.75;
-  color: var(--color-ink);
-  font-style: normal;
-  flex-grow: 1;
-  margin-bottom: var(--space-xl);
-}
-
-.proof__author {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-}
-
-.proof__avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--color-paper-2);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.proof__author-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.proof__name {
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.proof__verified {
-  font-size: var(--text-xs);
-  color: var(--color-success);
-  font-weight: 600;
+  padding: 18px 40px;
 }
 
 @keyframes proof-scroll {
@@ -1528,7 +1493,7 @@ ul, ol { list-style: none; }
     margin: 0 auto;
   }
 
-  .proof__card { width: 280px; }
+  .proof__slide { width: 280px; }
 
   .discover__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1788,96 +1753,77 @@ ul, ol { list-style: none; }
     <div class="proof__carousel">
       <div class="proof__track">
         <!-- Set 1 -->
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Llevo tratando de emprender un a&ntilde;o y no hab&iacute;a tenido tanta claridad como despu&eacute;s de esas dos horas contigo. En esta semana he podido concretar m&aacute;s cosas que en el &uacute;ltimo a&ntilde;o.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Stephanie</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/01-stephanie.jpg" alt="Testimonio de Stephanie Portuguez" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Ya ten&iacute;amos una aplicaci&oacute;n, pero necesit&aacute;bamos estrategia. Trabajamos posicionamiento, comercializaci&oacute;n, propuesta de valor, rebranding y go-to-market. De cero estrategia a market-ready en 8 semanas.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Ronald / Therapp</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/02-rossina.jpg" alt="Testimonio de Rossina Jaco" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Rachel me ayud&oacute; a ver mi negocio desde una perspectiva completamente diferente. Ahora tengo claridad sobre mi estrategia y s&eacute; exactamente qu&eacute; pasos dar.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Testimonio</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/03-nela.jpg" alt="Testimonio de Nela Sánchez" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;La masterclass fue incre&iacute;ble. Por fin entend&iacute; por qu&eacute; mi negocio no crec&iacute;a a pesar de todo el esfuerzo que le pon&iacute;a. El enfoque estrat&eacute;gico cambi&oacute; todo.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Testimonio</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/04-maria-rosa.jpg" alt="Testimonio de Maria Rosa Vilchez" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/05-bravia.jpg" alt="Testimonio sobre experiencia Bravia" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/06a-steven.jpg" alt="Testimonio de Steven Martinez" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/07-curso.jpg" alt="Testimonio sobre el curso" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/08-negocio.jpg" alt="Testimonio sobre crear negocio" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/09-feedback1.jpg" alt="Testimonio de cliente" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/10-feedback2.jpg" alt="Testimonio de cliente" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/11-whatsapp.jpg" alt="Testimonio de cliente" loading="lazy">
         </div>
         <!-- Set 2 (duplicate for seamless loop) -->
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Llevo tratando de emprender un a&ntilde;o y no hab&iacute;a tenido tanta claridad como despu&eacute;s de esas dos horas contigo. En esta semana he podido concretar m&aacute;s cosas que en el &uacute;ltimo a&ntilde;o.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Stephanie</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/01-stephanie.jpg" alt="Testimonio de Stephanie Portuguez" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Ya ten&iacute;amos una aplicaci&oacute;n, pero necesit&aacute;bamos estrategia. Trabajamos posicionamiento, comercializaci&oacute;n, propuesta de valor, rebranding y go-to-market. De cero estrategia a market-ready en 8 semanas.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Ronald / Therapp</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/02-rossina.jpg" alt="Testimonio de Rossina Jaco" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;Rachel me ayud&oacute; a ver mi negocio desde una perspectiva completamente diferente. Ahora tengo claridad sobre mi estrategia y s&eacute; exactamente qu&eacute; pasos dar.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Testimonio</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/03-nela.jpg" alt="Testimonio de Nela Sánchez" loading="lazy">
         </div>
-        <div class="proof__card">
-          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="proof__quote">&ldquo;La masterclass fue incre&iacute;ble. Por fin entend&iacute; por qu&eacute; mi negocio no crec&iacute;a a pesar de todo el esfuerzo que le pon&iacute;a. El enfoque estrat&eacute;gico cambi&oacute; todo.&rdquo;</p>
-          <div class="proof__author">
-            <div class="proof__avatar"></div>
-            <div class="proof__author-info">
-              <span class="proof__name">- Testimonio</span>
-              <span class="proof__verified">Verified</span>
-            </div>
-          </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/04-maria-rosa.jpg" alt="Testimonio de Maria Rosa Vilchez" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/05-bravia.jpg" alt="Testimonio sobre experiencia Bravia" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/06a-steven.jpg" alt="Testimonio de Steven Martinez" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/07-curso.jpg" alt="Testimonio sobre el curso" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/08-negocio.jpg" alt="Testimonio sobre crear negocio" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/09-feedback1.jpg" alt="Testimonio de cliente" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/10-feedback2.jpg" alt="Testimonio de cliente" loading="lazy">
+        </div>
+        <div class="proof__slide">
+          <img src="assets/images/testimonials/11-whatsapp.jpg" alt="Testimonio de cliente" loading="lazy">
         </div>
       </div>
+    </div>
+    <div class="proof__cta">
+      <a href="#registro" class="btn-primary btn-primary--orange">Reservar Mi Lugar &rarr;</a>
     </div>
   </div>
 </section>
