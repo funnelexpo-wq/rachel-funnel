@@ -711,12 +711,32 @@ ul, ol { list-style: none; }
   margin-top: 3px;
 }
 
-.audience__cta-row {
+.audience__transformation {
   text-align: center;
   margin-top: var(--space-3xl);
 }
+.audience__transformation p {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.audience__cta-row {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
 .audience__cta-row .btn-primary {
   width: auto;
+  font-size: var(--text-lg);
+  padding: 18px 40px;
+}
+.btn-primary--orange {
+  background: var(--color-gold);
+}
+.btn-primary--orange:hover {
+  background: var(--color-orange);
 }
 .audience__cta-row p {
   font-family: var(--font-display);
@@ -1697,9 +1717,12 @@ ul, ol { list-style: none; }
         </ul>
       </div>
     </div>
+    <div class="audience__transformation">
+      <p>De Una Fundadora Que Improvisa &rarr; A Una Fundadora Que Piensa Estrat&eacute;gicamente</p>
+    </div>
     <div class="audience__cta-row">
       <p>&iquest;Te identificas? Reserva tu plaza ahora.</p>
-      <a href="#registro" class="btn-primary">Quiero Mi Plaza Gratuita &rarr;</a>
+      <a href="#registro" class="btn-primary btn-primary--orange">Quiero Mi Plaza Gratuita &rarr;</a>
     </div>
   </div>
 </section>
