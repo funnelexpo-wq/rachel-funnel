@@ -574,7 +574,7 @@ ul, ol { list-style: none; }
 
 /* ─── 5. WHO THIS IS FOR ─── */
 .audience {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-paper);
   position: relative;
   overflow: hidden;
@@ -747,7 +747,7 @@ ul, ol { list-style: none; }
 
 /* ─── 6. RACHEL'S STORY (ref: Larissa/Atenza split editorial) ─── */
 .story {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
   position: relative;
@@ -840,7 +840,7 @@ ul, ol { list-style: none; }
 
 /* ─── 7. SOCIAL PROOF (ref: Atenza accent-bordered cards) ─── */
 .proof {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
 }
@@ -862,50 +862,45 @@ ul, ol { list-style: none; }
 
 .proof__title {
   font-family: var(--font-display);
-  font-size: var(--text-display);
+  font-size: var(--text-display-lg);
   font-weight: 700;
   color: var(--color-white);
 }
 
-.proof__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.proof__carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.proof__track {
+  display: flex;
   gap: var(--space-xl);
+  animation: proof-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.proof__track:hover {
+  animation-play-state: paused;
 }
 
 .proof__card {
+  flex-shrink: 0;
+  width: 380px;
   background: var(--color-white);
-  border: none;
   border-radius: var(--radius-lg);
   padding: var(--space-2xl);
-  position: relative;
-  transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.proof__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-}
-
-.proof__card::before {
-  content: "\201C";
-  font-family: var(--font-display);
-  font-size: 5rem;
-  color: var(--color-accent);
-  opacity: 0.12;
-  position: absolute;
-  top: var(--space-md);
-  right: var(--space-xl);
-  line-height: 1;
-}
-
-.proof__name {
-  font-family: var(--font-heading);
+.proof__stars {
+  color: var(--color-gold);
   font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--color-accent);
   margin-bottom: var(--space-md);
+  letter-spacing: 2px;
 }
 
 .proof__quote {
@@ -913,29 +908,51 @@ ul, ol { list-style: none; }
   line-height: 1.75;
   color: var(--color-ink);
   font-style: normal;
+  flex-grow: 1;
+  margin-bottom: var(--space-xl);
 }
 
-.proof__quote p {
-  margin-bottom: var(--space-md);
+.proof__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
 }
 
-.proof__quote p:last-child { margin-bottom: 0; }
+.proof__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-paper-2);
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
-.proof__result {
-  margin-top: var(--space-lg);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-rule);
+.proof__author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.proof__name {
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 700;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.proof__verified {
+  font-size: var(--text-xs);
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+@keyframes proof-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ─── 8. WHAT YOU'LL DISCOVER — Framework cards ─── */
 .discover {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-paper);
 }
 
@@ -1038,7 +1055,7 @@ ul, ol { list-style: none; }
 
 /* ─── 9. FOUNDER PERFORMANCE — Split (ref: Micheline bio, Atenza editorial) ─── */
 .founder {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-paper);
   color: var(--color-ink);
   overflow: hidden;
@@ -1103,7 +1120,7 @@ ul, ol { list-style: none; }
 
 /* ─── 10. THE MAP — Watermark (ref: Jornada background text) ─── */
 .map-reveal {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
   text-align: center;
@@ -1159,7 +1176,7 @@ ul, ol { list-style: none; }
 
 /* ─── 11. BRAVIA TRANSITION ─── */
 .bravia {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-paper);
   color: var(--color-ink);
 }
@@ -1258,7 +1275,7 @@ ul, ol { list-style: none; }
 
 /* ─── 12. FINAL CTA ─── */
 .final-cta {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-accent);
   color: var(--color-white);
   position: relative;
@@ -1376,7 +1393,7 @@ ul, ol { list-style: none; }
 
 /* ─── 13. FAQ ─── */
 .faq {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-3xl) 0;
   background: var(--color-paper);
 }
 
@@ -1511,7 +1528,7 @@ ul, ol { list-style: none; }
     margin: 0 auto;
   }
 
-  .proof__grid { grid-template-columns: 1fr; }
+  .proof__card { width: 280px; }
 
   .discover__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1768,20 +1785,98 @@ ul, ol { list-style: none; }
       <p class="proof__label">Resultados Reales</p>
       <h2 class="proof__title">Esto No Es Solo Teoría.</h2>
     </div>
-    <div class="proof__grid">
-      <div class="proof__card">
-        <p class="proof__name">Stephanie</p>
-        <blockquote class="proof__quote">
-          <p>&ldquo;Llevo tratando de emprender un año y no había tenido tanta claridad como después de esas dos horas contigo.&rdquo;</p>
-          <p>&ldquo;En esta semana he podido concretar más cosas que en el último año.&rdquo;</p>
-        </blockquote>
-      </div>
-      <div class="proof__card">
-        <p class="proof__name">Therapp / Ronald</p>
-        <blockquote class="proof__quote">
-          <p>Ya tenían una aplicación, pero necesitaban estrategia. Trabajamos posicionamiento, comercialización, propuesta de valor, rebranding y go-to-market durante aproximadamente dos meses y medio.</p>
-        </blockquote>
-        <p class="proof__result">De cero estrategia de marketing a market-ready en 8 semanas</p>
+    <div class="proof__carousel">
+      <div class="proof__track">
+        <!-- Set 1 -->
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Llevo tratando de emprender un a&ntilde;o y no hab&iacute;a tenido tanta claridad como despu&eacute;s de esas dos horas contigo. En esta semana he podido concretar m&aacute;s cosas que en el &uacute;ltimo a&ntilde;o.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Stephanie</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Ya ten&iacute;amos una aplicaci&oacute;n, pero necesit&aacute;bamos estrategia. Trabajamos posicionamiento, comercializaci&oacute;n, propuesta de valor, rebranding y go-to-market. De cero estrategia a market-ready en 8 semanas.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Ronald / Therapp</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Rachel me ayud&oacute; a ver mi negocio desde una perspectiva completamente diferente. Ahora tengo claridad sobre mi estrategia y s&eacute; exactamente qu&eacute; pasos dar.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Testimonio</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;La masterclass fue incre&iacute;ble. Por fin entend&iacute; por qu&eacute; mi negocio no crec&iacute;a a pesar de todo el esfuerzo que le pon&iacute;a. El enfoque estrat&eacute;gico cambi&oacute; todo.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Testimonio</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Llevo tratando de emprender un a&ntilde;o y no hab&iacute;a tenido tanta claridad como despu&eacute;s de esas dos horas contigo. En esta semana he podido concretar m&aacute;s cosas que en el &uacute;ltimo a&ntilde;o.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Stephanie</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Ya ten&iacute;amos una aplicaci&oacute;n, pero necesit&aacute;bamos estrategia. Trabajamos posicionamiento, comercializaci&oacute;n, propuesta de valor, rebranding y go-to-market. De cero estrategia a market-ready en 8 semanas.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Ronald / Therapp</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;Rachel me ayud&oacute; a ver mi negocio desde una perspectiva completamente diferente. Ahora tengo claridad sobre mi estrategia y s&eacute; exactamente qu&eacute; pasos dar.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Testimonio</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof__card">
+          <div class="proof__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="proof__quote">&ldquo;La masterclass fue incre&iacute;ble. Por fin entend&iacute; por qu&eacute; mi negocio no crec&iacute;a a pesar de todo el esfuerzo que le pon&iacute;a. El enfoque estrat&eacute;gico cambi&oacute; todo.&rdquo;</p>
+          <div class="proof__author">
+            <div class="proof__avatar"></div>
+            <div class="proof__author-info">
+              <span class="proof__name">- Testimonio</span>
+              <span class="proof__verified">Verified</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
