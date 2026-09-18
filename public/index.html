@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vende Como Una Marca Grande en 90 Días — Masterclass Gratuita con Rachel Stewart</title>
+<title>Vende Como Una Marca Grande — Masterclass Gratuita con Rachel Stewart</title>
 <meta name="description" content="Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio. Masterclass gratuita en vivo. Miércoles 2 de septiembre, 8:00 PM España.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +62,9 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 3rem;
-  --space-4xl: 4rem;
-  --space-5xl: 5rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -131,8 +131,8 @@ ul, ol { list-style: none; }
 
 /* ─── 1. EVENT BAR ─── */
 .event-bar {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-accent);
+  color: var(--color-white);
   padding: 12px var(--space-xl);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -144,7 +144,7 @@ ul, ol { list-style: none; }
   z-index: 100;
   will-change: transform;
   transform: translateZ(0);
-  border-bottom: 1px solid var(--color-rule);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .event-bar__inner {
@@ -161,7 +161,6 @@ ul, ol { list-style: none; }
   height: 48px;
   width: auto;
   justify-self: start;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(85%) saturate(1200%) hue-rotate(199deg) brightness(95%) contrast(90%);
 }
 
 .event-bar__center {
@@ -184,7 +183,7 @@ ul, ol { list-style: none; }
 .event-bar__divider {
   width: 1px;
   height: 24px;
-  background: var(--color-rule);
+  background: rgba(255,255,255,0.2);
   flex-shrink: 0;
 }
 
@@ -199,7 +198,7 @@ ul, ol { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--color-accent);
+  background: rgba(255,255,255,0.1);
   border-radius: var(--radius-sm);
   padding: 4px 8px;
   min-width: 2.8rem;
@@ -237,8 +236,8 @@ ul, ol { list-style: none; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-white);
-  background: var(--color-accent);
+  color: var(--color-accent-dark);
+  background: var(--color-white);
   padding: 6px 16px;
   border-radius: var(--radius-pill);
   text-decoration: none;
@@ -309,7 +308,7 @@ ul, ol { list-style: none; }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 2.8vw + 0.5rem, 3.5rem);
+  font-size: clamp(2.8rem, 4.5vw + 0.5rem, 5rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -324,12 +323,6 @@ ul, ol { list-style: none; }
   opacity: 0.85;
   margin-bottom: var(--space-md);
   max-width: 50ch;
-}
-
-.hero__subtitle--lead {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  opacity: 1;
 }
 
 .hero__meta {
@@ -456,7 +449,7 @@ ul, ol { list-style: none; }
 
 /* ─── 3. BIG PROMISE — Split editorial ─── */
 .promise {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
 }
 
@@ -474,9 +467,9 @@ ul, ol { list-style: none; }
 
 .promise__title {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 2.5vw + 0.5rem, 2.8rem);
+  font-size: var(--text-display);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--color-ink);
 }
@@ -509,17 +502,17 @@ ul, ol { list-style: none; }
 
 .trust__label {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-align: center;
-  color: var(--color-ink);
+  color: var(--color-muted);
   margin-bottom: var(--space-sm);
 }
 
 .trust__sublabel {
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   text-align: center;
   color: var(--color-ink-2);
   margin-bottom: var(--space-2xl);
@@ -529,14 +522,14 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xl);
-  flex-wrap: nowrap;
+  gap: var(--space-3xl);
+  flex-wrap: wrap;
   padding: 0 var(--space-xl);
 }
 
 .trust__logo {
-  height: 50px;
-  width: 130px;
+  height: 40px;
+  width: 120px;
   object-fit: contain;
   opacity: 0.65;
   filter: grayscale(100%);
@@ -545,10 +538,9 @@ ul, ol { list-style: none; }
               filter var(--dur-normal) var(--ease-out);
 }
 
-.trust__logo:nth-child(5),
-.trust__logo:nth-child(6) {
-  width: 160px;
-  height: 60px;
+.trust__logo:last-child {
+  width: 200px;
+  height: 50px;
 }
 
 .trust__logo:hover {
@@ -574,7 +566,7 @@ ul, ol { list-style: none; }
 
 /* ─── 5. WHO THIS IS FOR ─── */
 .audience {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
   position: relative;
   overflow: hidden;
@@ -663,12 +655,13 @@ ul, ol { list-style: none; }
   flex-shrink: 0;
 }
 .audience__col--yes .audience__col-icon {
-  background: none;
-  font-size: 28px;
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 .audience__col--no .audience__col-icon {
-  background: none;
-  font-size: 28px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
 }
 
 .audience__col h3 {
@@ -706,37 +699,31 @@ ul, ol { list-style: none; }
 
 .audience__icon {
   flex-shrink: 0;
-  font-size: 18px;
-  line-height: 1;
-  margin-top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 4px;
 }
 
-.audience__transformation {
-  text-align: center;
-  margin-top: var(--space-3xl);
+.audience__col--yes .audience__icon {
+  background: var(--color-accent);
+  color: var(--color-white);
 }
-.audience__transformation p {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-ink);
+
+.audience__col--no .audience__icon {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.5);
 }
+
 .audience__cta-row {
   text-align: center;
-  margin-top: var(--space-2xl);
-}
-.audience__cta-row .btn-primary {
-  width: auto;
-  font-size: var(--text-lg);
-  padding: 18px 40px;
-}
-.btn-primary--orange {
-  background: var(--color-gold);
-}
-.btn-primary--orange:hover {
-  background: var(--color-orange);
+  margin-top: var(--space-3xl);
 }
 .audience__cta-row p {
   font-family: var(--font-display);
@@ -747,7 +734,7 @@ ul, ol { list-style: none; }
 
 /* ─── 6. RACHEL'S STORY (ref: Larissa/Atenza split editorial) ─── */
 .story {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
   position: relative;
@@ -840,7 +827,7 @@ ul, ol { list-style: none; }
 
 /* ─── 7. SOCIAL PROOF (ref: Atenza accent-bordered cards) ─── */
 .proof {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
 }
@@ -862,63 +849,80 @@ ul, ol { list-style: none; }
 
 .proof__title {
   font-family: var(--font-display);
-  font-size: var(--text-display-lg);
+  font-size: var(--text-display);
   font-weight: 700;
   color: var(--color-white);
 }
 
-.proof__carousel {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-.proof__track {
-  display: flex;
+.proof__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
-  animation: proof-scroll 40s linear infinite;
-  width: max-content;
 }
 
-.proof__track:hover {
-  animation-play-state: paused;
-}
-
-.proof__slide {
-  flex-shrink: 0;
-  width: 340px;
-  height: 480px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+.proof__card {
   background: var(--color-white);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  position: relative;
+  transition: transform var(--dur-normal) var(--ease-out), box-shadow var(--dur-normal) var(--ease-out);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.proof__slide img {
-  width: 100%;
-  height: auto;
-  display: block;
+.proof__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
-.proof__cta {
-  text-align: center;
-  margin-top: var(--space-2xl);
+.proof__card::before {
+  content: "\201C";
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--color-accent);
+  opacity: 0.12;
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-xl);
+  line-height: 1;
 }
 
-.proof__cta .btn-primary--orange {
-  width: auto;
+.proof__name {
+  font-family: var(--font-heading);
   font-size: var(--text-lg);
-  padding: 18px 40px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
 }
 
-@keyframes proof-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.proof__quote {
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-ink);
+  font-style: normal;
+}
+
+.proof__quote p {
+  margin-bottom: var(--space-md);
+}
+
+.proof__quote p:last-child { margin-bottom: 0; }
+
+.proof__result {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* ─── 8. WHAT YOU'LL DISCOVER — Framework cards ─── */
 .discover {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
 }
 
@@ -1021,7 +1025,7 @@ ul, ol { list-style: none; }
 
 /* ─── 9. FOUNDER PERFORMANCE — Split (ref: Micheline bio, Atenza editorial) ─── */
 .founder {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
   color: var(--color-ink);
   overflow: hidden;
@@ -1086,7 +1090,7 @@ ul, ol { list-style: none; }
 
 /* ─── 10. THE MAP — Watermark (ref: Jornada background text) ─── */
 .map-reveal {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-hero-bg);
   color: var(--color-white);
   text-align: center;
@@ -1132,10 +1136,9 @@ ul, ol { list-style: none; }
 }
 
 .map-reveal__body {
-  font-size: var(--text-xl);
-  font-weight: 700;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.9);
+  font-size: var(--text-md);
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
   max-width: 55ch;
   margin: 0 auto;
   position: relative;
@@ -1143,7 +1146,7 @@ ul, ol { list-style: none; }
 
 /* ─── 11. BRAVIA TRANSITION ─── */
 .bravia {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
   color: var(--color-ink);
 }
@@ -1242,7 +1245,7 @@ ul, ol { list-style: none; }
 
 /* ─── 12. FINAL CTA ─── */
 .final-cta {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-accent);
   color: var(--color-white);
   position: relative;
@@ -1360,7 +1363,7 @@ ul, ol { list-style: none; }
 
 /* ─── 13. FAQ ─── */
 .faq {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-5xl) 0;
   background: var(--color-paper);
 }
 
@@ -1495,7 +1498,7 @@ ul, ol { list-style: none; }
     margin: 0 auto;
   }
 
-  .proof__slide { width: 280px; }
+  .proof__grid { grid-template-columns: 1fr; }
 
   .discover__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1522,9 +1525,9 @@ ul, ol { list-style: none; }
   .event-bar { padding: 8px var(--space-sm); }
   .event-bar__inner { grid-template-columns: 1fr; justify-items: center; gap: 6px; }
   .event-bar__text { font-size: 0.6rem; white-space: normal; text-align: center; }
-  .event-bar__logo { height: 20px; }
+  .event-bar__logo { display: none; }
   .event-bar__divider { display: none; }
-  .event-bar__cta { font-size: 0.6rem; padding: 6px 12px; }
+  .event-bar__cta { display: none; }
   .countdown__number { font-size: var(--text-base); }
   .countdown__unit { min-width: 2rem; }
 
@@ -1536,7 +1539,7 @@ ul, ol { list-style: none; }
 
   .promise__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
 
-  .trust__logos { gap: var(--space-lg); flex-wrap: wrap; }
+  .trust__logos { gap: var(--space-lg); }
   .trust__logo { height: 28px; width: 80px; }
 
   .photo-break { height: clamp(150px, 40vw, 250px); }
@@ -1551,21 +1554,12 @@ ul, ol { list-style: none; }
 
   .map-reveal__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
 
-  .final-cta { padding: var(--space-4xl) 0; }
-  .final-cta__inner { grid-template-columns: 1fr; text-align: center; gap: var(--space-xl); }
+  .final-cta__inner { grid-template-columns: 1fr; text-align: center; }
   .final-cta__left { text-align: center; }
-  .final-cta__body { margin-left: auto; margin-right: auto; max-width: 100%; }
-  .final-cta__title { font-size: clamp(1.75rem, 5vw, 2.5rem); overflow-wrap: anywhere; }
-  .final-cta__right { padding: var(--space-lg); }
-  .final-cta .countdown__unit { min-width: 2.5rem; padding: 10px 12px; }
-  .final-cta .countdown__number { font-size: var(--text-2xl); }
-  .final-cta .countdown__sep { font-size: var(--text-lg); margin-top: 6px; }
-  .final-cta .btn-primary { font-size: 0.75rem; padding: 14px 20px; }
+  .final-cta__body { margin-left: auto; margin-right: auto; }
+  .final-cta__title { font-size: clamp(1.75rem, 5vw, 2.5rem); }
 
   .bravia__grid { justify-content: center; }
-
-  .map-reveal__title { overflow-wrap: anywhere; }
-  .map-reveal__body { padding-inline: 0; }
 }
 </style>
 </head>
@@ -1576,7 +1570,7 @@ ul, ol { list-style: none; }
   <div class="event-bar__inner">
     <img src="assets/images/logos/tmpbozsfavt.webp" alt="Evolvia Studio" class="event-bar__logo">
     <div class="event-bar__center">
-      <span class="event-bar__text">Masterclass Gratuita en Vivo &middot; Miércoles 2 de Septiembre &middot; 8:00 PM Hora España / Madrid</span>
+      <span class="event-bar__text">Masterclass Gratuita en Vivo &middot; Miércoles 2 de Septiembre &middot; 8:00 PM España</span>
       <span class="event-bar__divider"></span>
       <div class="countdown" id="countdown-top" aria-label="Cuenta regresiva">
         <div class="countdown__unit"><span class="countdown__number" data-unit="days">--</span><span class="countdown__label">Días</span></div>
@@ -1598,10 +1592,10 @@ ul, ol { list-style: none; }
   <div class="hero__grid">
     <div class="hero__content">
       <p class="hero__eyebrow">Evento Online de</p>
-      <h1 class="hero__title">Vende Como Una Marca Grande en 90 Días</h1>
-      <p class="hero__subtitle hero__subtitle--lead">El método de crecimiento de las grandes marcas, adaptado a tu negocio para dejar de vender por rachas y crecer con estrategia</p>
-      <p class="hero__subtitle">Para fundadoras y consultoras que ya tienen un negocio y están listas para dejar de improvisar, crecer con método y convertirse en la persona capaz de sostener el siguiente nivel de crecimiento de su negocio</p>
-      <p class="hero__meta">Miércoles 2 de Septiembre, a las 8:00 PM Hora España / Madrid<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+      <h1 class="hero__title">Vende Como Una Marca Grande</h1>
+      <p class="hero__subtitle">Aplica la lógica de crecimiento de las grandes marcas a tu negocio.</p>
+      <p class="hero__subtitle">El método de crecimiento de las grandes marcas, adaptado a tu negocio para dejar de vender por rachas y crecer con estrategia.</p>
+      <p class="hero__meta">Miércoles 2 de Septiembre, a las 20:00 Horas (España)<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
       <div class="form-card">
         <h2 class="form-card__title">Regístrate Gratis Aquí</h2>
         <form id="registration-form" action="#" method="POST">
@@ -1643,14 +1637,13 @@ ul, ol { list-style: none; }
 <!-- 4. TRUST LOGOS -->
 <section class="trust">
   <div class="container">
-    <p class="trust__label">Una Trayectoria Respaldada Por Grandes Marcas</p>
-    <p class="trust__sublabel">Más de 13 años de experiencia en marketing y estrategia, junto a algunas de las marcas y organizaciones más reconocidas de la industria</p>
+    <p class="trust__label">Estrategia y Marketing Aprendidos Desde Dentro de Grandes Marcas</p>
+    <p class="trust__sublabel">Más de 13 años de experiencia en marketing y estrategia para compañías como:</p>
     <div class="trust__logos">
       <img src="assets/images/logos/PepsiCo.svg" alt="PepsiCo" class="trust__logo">
       <img src="assets/images/logos/KraftHeinz_Logo.png" alt="Kraft Heinz" class="trust__logo">
       <img src="assets/images/logos/logo_dos_pinos.png" alt="Dos Pinos" class="trust__logo">
       <img src="assets/images/logos/cannes-lions-logo-transparent.png" alt="Cannes Lions" class="trust__logo">
-      <img src="assets/images/logos/effie-awards.jpg" alt="Effie Awards Latin America" class="trust__logo">
       <img src="assets/images/logos/latam.webp" alt="LATAM" class="trust__logo">
     </div>
   </div>
@@ -1672,41 +1665,34 @@ ul, ol { list-style: none; }
     <div class="audience__grid">
       <div class="audience__col audience__col--yes">
         <div class="audience__col-header">
-          <span class="audience__col-icon" aria-hidden="true">✅</span>
+          <span class="audience__col-icon" aria-hidden="true">&#10003;</span>
           <h3>S&iacute;, Es Para Ti Si&hellip;</h3>
         </div>
         <ul class="audience__list">
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Ya tienes un negocio funcionando y quieres hacerlo crecer.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Tienes ventas, pero son irregulares o impredecibles.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Sientes que demasiado del negocio depende de ti.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Sabes que podr&iacute;as estar facturando m&aacute;s, pero no sabes qu&eacute; est&aacute; frenando el crecimiento.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Tienes muchas ideas y te cuesta decidir d&oacute;nde poner el foco.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Tu marketing se siente como publicar, probar, lanzar y esperar a ver qu&eacute; pasa.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Quieres dejar de improvisar y empezar a tomar decisiones de crecimiento con estrategia.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">✅</span><span>Sientes que te falta esa fortaleza mental que todo Empresario de Alto Impacto tiene para hacer crecer tu Negocio y convertirlo en un Negocio Millonario.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Ya tienes un negocio funcionando y quieres hacerlo crecer.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tienes ventas, pero son irregulares o impredecibles.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Sientes que demasiado del negocio depende de ti.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Sabes que podr&iacute;as estar facturando m&aacute;s, pero no sabes qu&eacute; est&aacute; frenando el crecimiento.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tienes muchas ideas y te cuesta decidir d&oacute;nde poner el foco.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Tu marketing se siente como publicar, probar, lanzar y esperar a ver qu&eacute; pasa.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10003;</span><span>Quieres dejar de improvisar y empezar a tomar decisiones de crecimiento con estrategia.</span></li>
         </ul>
       </div>
       <div class="audience__col audience__col--no">
         <div class="audience__col-header">
-          <span class="audience__col-icon" aria-hidden="true">❌</span>
+          <span class="audience__col-icon" aria-hidden="true">&#10007;</span>
           <h3>No Es Para Ti Si&hellip;</h3>
         </div>
         <ul class="audience__list">
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>Todav&iacute;a no tienes un negocio.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>Est&aacute;s buscando una idea para emprender desde cero.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>Buscas hacks r&aacute;pidos para redes sociales.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>No est&aacute;s lista para implementar lo que aprendes.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>No est&aacute;s dispuesta a comprometerte con un esfuerzo constante y un cambio real.</span></li>
-          <li><span class="audience__icon" aria-hidden="true">❌</span><span>No est&aacute;s lista para invertir en tu propio crecimiento.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Todav&iacute;a no tienes un negocio.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Est&aacute;s buscando una idea para emprender desde cero.</span></li>
+          <li><span class="audience__icon" aria-hidden="true">&#10007;</span><span>Buscas hacks r&aacute;pidos para redes sociales.</span></li>
         </ul>
       </div>
     </div>
-    <div class="audience__transformation">
-      <p>De Una Fundadora Que Improvisa &rarr; A Una Fundadora Que Piensa Estrat&eacute;gicamente</p>
-    </div>
     <div class="audience__cta-row">
       <p>&iquest;Te identificas? Reserva tu plaza ahora.</p>
-      <a href="#registro" class="btn-primary btn-primary--orange">Quiero Mi Plaza Gratuita &rarr;</a>
+      <a href="#registro" class="btn-primary">Quiero Mi Plaza Gratuita &rarr;</a>
     </div>
   </div>
 </section>
@@ -1716,25 +1702,24 @@ ul, ol { list-style: none; }
   <div class="container">
     <div class="story__grid">
       <div class="story__text">
-        <p class="story__label">Sobre Rachel Regina</p>
-        <h2 class="story__title">Hola, soy Rachel y yo tambi&eacute;n he recorrido este camino.</h2>
-        <p>Durante m&aacute;s de 13 a&ntilde;os trabaj&eacute; en marketing y estrategia para grandes compa&ntilde;&iacute;as, aprendiendo desde dentro c&oacute;mo se construyen marcas, se identifican oportunidades y se toman decisiones que impulsan el crecimiento.</p>
+        <p class="story__label">Sobre Rachel Stewart</p>
+        <h2 class="story__title">Yo Tambi&eacute;n He Recorrido Este Camino.</h2>
+        <p>Durante m&aacute;s de 13 a&ntilde;os trabaj&eacute; en marketing y estrategia para grandes compa&ntilde;&iacute;as, aprendiendo desde dentro c&oacute;mo se construyen marcas, se identifican oportunidades y se toman decisiones de crecimiento.</p>
         <p>Pero tambi&eacute;n constru&iacute; mis propios negocios.</p>
-        <blockquote class="story__pullquote">Y fue ah&iacute; donde entend&iacute; que el crecimiento no viene de hacer m&aacute;s cosas, sino de entender qu&eacute; decisiones realmente mueven el negocio.</blockquote>
-        <p>Hoy combino mi experiencia trabajando con grandes marcas con lo que he aprendido construyendo mis propios negocios, para ayudar a otras fundadoras a crecer con <strong>m&aacute;s claridad, estrategia y confianza.</strong></p>
-        <p><strong>Experiencia que tambi&eacute;n he llevado a mis propios negocios</strong></p>
+        <blockquote class="story__pullquote">El crecimiento no viene de hacer m&aacute;s cosas, sino de entender qu&eacute; decisiones realmente mueven el negocio.</blockquote>
+        <p>Hoy combino esa experiencia corporativa con lo que he aprendido construyendo mis propios negocios para ayudar a otras fundadoras a crecer con estrategia.</p>
         <div class="story__stats">
           <div>
-            <div class="story__stat-num">13+</div>
-            <div class="story__stat-label">a&ntilde;os en marketing y estrategia para grandes marcas</div>
-          </div>
-          <div>
             <div class="story__stat-num">$62K+</div>
-            <div class="story__stat-label">facturados en 6 meses en mi primer negocio</div>
+            <div class="story__stat-label">Facturado en su primer negocio</div>
           </div>
           <div>
             <div class="story__stat-num">4.000+</div>
-            <div class="story__stat-label">unidades vendidas</div>
+            <div class="story__stat-label">Unidades vendidas</div>
+          </div>
+          <div>
+            <div class="story__stat-num">50+</div>
+            <div class="story__stat-label">Puntos de venta</div>
           </div>
         </div>
       </div>
@@ -1752,56 +1737,21 @@ ul, ol { list-style: none; }
       <p class="proof__label">Resultados Reales</p>
       <h2 class="proof__title">Esto No Es Solo Teoría.</h2>
     </div>
-    <div class="proof__carousel">
-      <div class="proof__track">
-        <!-- Set 1 (7 unique testimonials) -->
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/01-stephanie.jpg" alt="Testimonio de Stephanie Portuguez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/02-rossina.jpg" alt="Testimonio de Rossina Jaco" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/03-nela.jpg" alt="Testimonio de Nela Sánchez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/04-maria-rosa.jpg" alt="Testimonio de Maria Rosa Vilchez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/05-bravia.jpg" alt="Testimonio sobre experiencia Bravia" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/06a-steven.jpg" alt="Testimonio de Steven Martinez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/08-negocio.jpg" alt="Testimonio sobre crear negocio" loading="lazy">
-        </div>
-        <!-- Set 2 (duplicate for seamless loop) -->
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/01-stephanie.jpg" alt="Testimonio de Stephanie Portuguez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/02-rossina.jpg" alt="Testimonio de Rossina Jaco" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/03-nela.jpg" alt="Testimonio de Nela Sánchez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/04-maria-rosa.jpg" alt="Testimonio de Maria Rosa Vilchez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/05-bravia.jpg" alt="Testimonio sobre experiencia Bravia" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/06a-steven.jpg" alt="Testimonio de Steven Martinez" loading="lazy">
-        </div>
-        <div class="proof__slide">
-          <img src="assets/images/testimonials/08-negocio.jpg" alt="Testimonio sobre crear negocio" loading="lazy">
-        </div>
+    <div class="proof__grid">
+      <div class="proof__card">
+        <p class="proof__name">Stephanie</p>
+        <blockquote class="proof__quote">
+          <p>&ldquo;Llevo tratando de emprender un año y no había tenido tanta claridad como después de esas dos horas contigo.&rdquo;</p>
+          <p>&ldquo;En esta semana he podido concretar más cosas que en el último año.&rdquo;</p>
+        </blockquote>
       </div>
-    </div>
-    <div class="proof__cta">
-      <a href="#registro" class="btn-primary btn-primary--orange">Reservar Mi Lugar &rarr;</a>
+      <div class="proof__card">
+        <p class="proof__name">Therapp / Ronald</p>
+        <blockquote class="proof__quote">
+          <p>Ya tenían una aplicación, pero necesitaban estrategia. Trabajamos posicionamiento, comercialización, propuesta de valor, rebranding y go-to-market durante aproximadamente dos meses y medio.</p>
+        </blockquote>
+        <p class="proof__result">De cero estrategia de marketing a market-ready en 8 semanas</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1871,9 +1821,10 @@ ul, ol { list-style: none; }
 <section class="map-reveal">
   <div class="map-reveal__watermark" aria-hidden="true">BRAVIA</div>
   <div class="container container--narrow">
-    <h2 class="map-reveal__title">Vende Como Una Marca Grande en 90 Días</h2>
+    <h2 class="map-reveal__title">Vende Como Una Marca Grande</h2>
     <p class="map-reveal__subtitle">Este es el mapa.</p>
-    <p class="map-reveal__body">No necesitas publicar más. No necesitas más seguidores. No necesitas trabajar 12 horas. Necesitas tomar mejores decisiones.</p>
+    <p class="map-reveal__body">No te dije que publiques más. No te dije que tengas más seguidores. No te dije que hagas más lanzamientos. No te dije que trabajes 12 horas.</p>
+    <p class="map-reveal__body">Te dije que tomes mejores decisiones.</p>
   </div>
 </section>
 
@@ -1906,9 +1857,9 @@ ul, ol { list-style: none; }
     <div class="final-cta__inner">
       <div class="final-cta__left">
         <p class="final-cta__label">Masterclass Gratuita</p>
-        <h2 class="final-cta__title">Vende Como Una Marca Grande en 90 Días</h2>
+        <h2 class="final-cta__title">Vende Como Una Marca Grande</h2>
         <p class="final-cta__body">Descubre cómo aplicar la lógica de crecimiento de las grandes marcas a tu negocio para dejar de vender por rachas y empezar a crecer con estrategia.</p>
-        <p class="final-cta__meta">Miércoles 2 de Septiembre &middot; 8:00 PM Hora España / Madrid<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
+        <p class="final-cta__meta">Miércoles 2 de Septiembre &middot; 8:00 PM España<br>En Vivo &middot; 90 Minutos &middot; Sin Grabación</p>
       </div>
       <div class="final-cta__right">
         <p class="final-cta__right-title">La masterclass empieza en:</p>
@@ -1938,7 +1889,7 @@ ul, ol { list-style: none; }
       </div>
       <div class="faq__item">
         <button class="faq__question" aria-expanded="false">¿Cuándo es?<span class="faq__icon">+</span></button>
-        <div class="faq__answer" role="region"><div class="faq__answer-inner">Miércoles 2 de septiembre a las 8:00 PM, hora España / Madrid.</div></div>
+        <div class="faq__answer" role="region"><div class="faq__answer-inner">Miércoles 2 de septiembre a las 8:00 PM, hora España.</div></div>
       </div>
       <div class="faq__item">
         <button class="faq__question" aria-expanded="false">¿Cuánto dura?<span class="faq__icon">+</span></button>
@@ -1972,7 +1923,11 @@ ul, ol { list-style: none; }
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <span>Copyright &copy; 2026. Todos los derechos reservados.</span>
+      <span>&copy; Rachel Stewart / BRAVIA</span>
+      <span class="footer__sep">&middot;</span>
+      <a href="#">Política de Privacidad</a>
+      <span class="footer__sep">&middot;</span>
+      <a href="#">Términos y Condiciones</a>
     </div>
   </div>
 </footer>
@@ -2038,7 +1993,7 @@ ul, ol { list-style: none; }
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      window.location.href = '/thank-you';
+      window.location.href = 'thank-you.html';
     });
   }
 })();
